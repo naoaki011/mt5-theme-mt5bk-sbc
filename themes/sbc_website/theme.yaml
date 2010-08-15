@@ -11,7 +11,7 @@
 id: sbc_website
 label: SBCのテーマ
 name: SBCのテーマ
-version: 1.0
+version: 1.0.1
 author_link: http://www.sbcr.jp/
 author_name: ソフトバンククリエイティブ
 class: website
@@ -248,7 +248,7 @@ elements:
         folder: offer
       ../properties/index: 
         title: 設定用
-        text: 
+        text: |
           <p>このページは設定用であり、コンテンツは存在しません</p>
         tags: @settings
         folder: properties
