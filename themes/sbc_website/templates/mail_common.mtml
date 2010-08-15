@@ -1,0 +1,30 @@
+<div class="form">
+  <fieldset>
+    <legend accesskey="i">フォームに記入し投稿してください</legend>
+    <form method="post" action="<$mt:CGIPath$>plugins/MailForm/mt-mail-form.cgi" name="mail_form" id="mail_form">
+      <input type="hidden" name="mail_blog_id" value="<$mt:BlogID$>" />
+      <input type="hidden" name="mail_setting" value="<$mt:GetVar name="mail_setting">" />
+      <input type="hidden" name="mail_subject" value="<$mt:MailPreviewSubject$>" />
+      <dl>
+        <dt>会社名[c]</dt>
+        <dd><input accesskey="c" tabindex="1" type="text" id="mail_corporate" name="mail_corporate" value="<$mt:MailPreviewExtParam name="mail_corporate"$>" /></dd>
+        <dt>名前[n]* <strong>必須</strong></dt>
+        <dd><input accesskey="n" tabindex="2" type="text" id="mail_author" name="mail_author" value="<$mt:MailPreviewAuthor$>" /></dd>
+        <dt>E-mail[e]* <strong>必須</strong></dt>
+        <dd><input accesskey="e" tabindex="3" type="text" id="mail_email" name="mail_email" value="<$mt:MailPreviewEMail$>" /></dd>
+        <dt>URL[u]</dt>
+        <dd><input accesskey="u" tabindex="4" type="text" id="mail_url" name="mail_url" value="<mt:if name="mail_preview_template"><$mt:MailPreviewExtParam name="mail_url"$><mt:else>http://</mt:if>" /></dd>
+        <dt>ご住所[a]</dt>
+        <dd><input accesskey="a" tabindex="5" type="text" id="mail_address" name="mail_address" value="<$mt:MailPreviewExtParam name="mail_address"$>" /></dd>
+        <dt>電話番号[t]</dt>
+        <dd><input accesskey="t" tabindex="6" type="text" id="mail_phonenumber" name="mail_phonenumber" value="<$mt:MailPreviewExtParam name="mail_phonenumber"$>" /></dd>
+      </dl>
+      <p>お問い合わせ内容[m]* <strong>必須</strong><br />
+      <textarea accesskey="m" tabindex="7" id="mail_text" name="mail_text" cols="50" onblur="(t=this).value==''&amp;&amp;(t.value=t.def_value);" onfocus="(t=this).def_value||(t.def_value=t.value);t.def_value==t.value&amp;&amp;(t.value='');" rows="7"><mt:if name="mail_preview_template"><$mt:MailPreviewBody$><mt:else>お問い合わせ内容をご記入ください</mt:if></textarea><br />
+Submit[s・ r]<br />
+      <input accesskey="s" tabindex="8" type="submit" id="mail_post" name="mail_post" value=" 送信 " />
+      <input accesskey="r" tabindex="9" type="reset" value="リセット" /></p>
+    </form>
+  </fieldset>
+  <p><a href="http://www.h-fj.com/blog/mtplgdoc/mailformv2_2.php">Powered by メールフォームプラグイン V2.20</a><br />Copyright &copy; by <a href="http://www.h-fj.com/blog/">H.Fujimoto</a></p>
+</div>

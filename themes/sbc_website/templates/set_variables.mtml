@@ -1,0 +1,36 @@
+<mt:SetVars>
+<mt:IfWebsite>
+    website_url=<$mt:WebsiteURL$>
+    website_name=<$mt:WebsiteName$>
+	<mt:Pages tag="@settings" limit="1">
+    gcustom_search=<$mt:PageDataGooglecustomsearch$>
+    gmap_apikey=<$mt:PageDataGooglemapsapi$>
+    ganalytics_profileid=<$mt:PageDataGoogleanalyticsaccount$>
+	</mt:Pages>
+	<mt:Ignore>
+  ブログ名とブログIDの関連付けをしています。
+  ブログ名の変更時には、変更に合わせて、下のmt:If内の比較対象とするブログ名に変更してください。
+	</mt:Ignore>
+	<mt:Blogs include_blogs="children">
+		<mt:If tag="BlogName" eq="お知らせ">
+    info_blogid=<$mt:BlogID$>
+		</mt:If>
+		<mt:If tag="BlogName" eq="商品案内">
+    product_blogid=<$mt:BlogID$>
+		</mt:If>
+		<mt:If tag="BlogName" eq="世界で活躍する商社マンブログ">
+    blog_blogid=<$mt:BlogID$>
+		</mt:If>
+	</mt:Blogs>
+<mt:Else>
+	<mt:BlogParentWebsite>
+    website_url=<$mt:WebsiteURL$>
+    website_name=<$mt:WebsiteName$>
+		<mt:Pages tag="@settings" limit="1">
+    gcustom_search=<$mt:PageDataGooglecustomsearch$>
+    gmap_apikey=<$mt:PageDataGooglemapsapi$>
+    ganalytics_profileid=<$mt:PageDataGoogleanalyticsaccount$>
+		</mt:Pages>
+	</mt:BlogParentWebsite>
+</mt:IfWebsite>
+</mt:SetVars>

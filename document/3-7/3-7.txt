@@ -1,0 +1,323 @@
+■指定可能なフォントサイズ
+-------------------------ここから↓-------------------------
+10px/77%;11px/85%,12px/93%;13px/100%;14px/108%;15px/116%;16px/123.1%;17px/131%;18px/138.5%;19px/146.5%;20px/153.9%;21px/161.6%;22px/167%;23px/174%;24px/182%;25%/189%;26px/197%
+-------------------------ここまで↑-------------------------
+
+
+■編集領域に関する設定
+-----------------------ここから↓--------------------------
+/*
+Copyright (c) 2003-2009, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see http://ckeditor.com/license
+*/
+body{font:13px/1.231 arial,helvetica,clean,sans-serif;*fontsize:
+small;*font:x-small;}select,input,button,textarea,button{
+font:99% arial,helvetica,clean,sans-serif;}table{fontsize:
+inherit;font:100%;}pre,code,kbd,samp,tt{fontfamily:
+monospace;*font-size:108%;line-height:100%;}
+html
+{
+/* #3658: [IE6] Editor document has horizontal scrollbar on long lines
+To prevent this misbehavior, we show the scrollbar always */
+_overflow-y: scroll
+}
+img:-moz-broken
+{
+-moz-force-broken-image-icon : 1;
+width : 24px;
+height : 24px;
+}
+img, input, textarea
+{
+cursor: default;
+}
+/*entry 要素（WYSIWYGエディタ用）
+-----------------------------------------------------------------------------*/
+/* 画像 */
+img {
+vertical-align: middle;
+border-style: none;
+}
+
+/* 強調 */
+strong {
+font-weight: bold;
+color: #ff6600;
+background-color: transparent;
+}
+
+/* 強調 */
+em {
+font-style: normal;
+color: #333333;
+background-color: transparent;
+}
+
+/* 区切り */
+hr {
+clear: both;
+}
+
+/* リンク枠 */
+a{
+outline:none;
+}
+
+/* 箇条書き */
+li {
+list-style-type: disc;
+}
+
+/************************************************
+*コンテント*
+************************************************/
+/* コンテント リンク色 */
+a: {
+text-decoration: underline;
+color: #336699;
+background-color: transparent;
+}
+
+a:link {
+text-decoration: underline;
+color: #336699;
+background-color: transparent;
+}
+a:link:hover {
+text-decoration: underline;
+color: #ff3300;
+background-color: transparent;
+}
+a:link:active {
+text-decoration: underline;
+color: #ff3300;
+background-color: transparent;
+}
+a:visited {
+text-decoration: underline;
+color: #003366;
+background-color: transparent;
+}
+a:visited:hover {
+text-decoration: underline;
+color: #ff3300;
+background-color: transparent;
+}
+a:visited:active {
+text-decoration: underline;
+color: #ff3300;
+background-color: transparent;
+}
+
+h2 a {
+color: #ffffff !important;
+background-color: transparent;
+}
+
+h2 a:hover {
+color: #ffcc00 !important;
+background-color: transparent;
+}
+
+/* main見出し */
+h2 {
+font-size: 107.69%;
+font-weight: bold;
+color: #ffffff;
+background-color: #000000;
+background-image: url(../blogimg/h2.png);
+background-position: left top;
+background-repeat: repeat-y;
+padding-top: 5px;
+padding-left: 10px;
+padding-right: 10px;
+margin-bottom: 1em;
+padding-bottom: 5px;
+clear: both;
+}
+
+h3 {
+font-size: 107.69%;
+font-weight: bold;
+color: #333333;
+padding-top: 0px;
+border-left-width: 5px;
+border-left-style: solid;
+border-left-color: #666666;
+padding-left: 10px;
+padding-right: 10px;
+margin-bottom: 1em;
+padding-bottom: 0px;
+clear: both;
+}
+
+
+h4 {
+font-size: 100%; /* 13px相当 */
+font-weight: bold;
+margin-bottom: .7em;
+border-bottom-width: 1px;
+border-bottom-style: dotted;
+border-bottom-color: #cccccc;
+padding-bottom: 5px;
+clear: both;
+}
+
+/* main 段落 */
+p {
+    margin:0 0 1.5em 2px;
+}
+
+/* 定義リスト */
+dl {
+margin-bottom: 1.5em;
+}
+
+/* 順不同リスト（箇条書き）*/
+ul   {
+padding-left: 2em;
+margin-bottom: 1.5em;
+}
+
+/* 番号付きリスト（箇条書き）*/
+ol  {
+padding-left: 30px;
+}
+
+/* リスト項目 */
+li   {
+list-style:disc;
+margin-bottom:0.5em;
+}
+ul li li{
+    list-style:circle;
+}
+ul li li li{
+    list-style:square;
+}
+
+ol li{
+    list-style:decimal;
+}
+
+/* 引用元情報 */
+cite {
+font-style: italic;
+}
+
+/* 引用 */
+blockquote {
+font-size: 92.3%; /* 12px相当 */
+color: #333333;
+background-color: transparent;
+border-width: 1px;
+border-style: solid;
+border-color: #cccccc;
+padding: 5px;
+margin-bottom: 1.5em;
+clear: both;
+}
+
+/* 整形済みテキスト */
+pre {
+font-size: 92.3%; /* 12px相当 */
+color: #333333;
+background-color: transparent;
+border-width: 1px;
+border-style: solid;
+border-color: #d0d0d0;
+padding: 5px;
+margin-bottom: 1.5em;
+clear: both;
+overflow: scroll;
+}
+
+/*hr*/
+hr{
+    border:none;
+    border-top:dotted 1px #cccccc;
+    height:1px;
+    color:#FFFFFF;
+    margin:2em 0;
+}
+
+/* 画像 */
+img{
+margin-top: 0;
+border-width: 1px;
+border-style: solid;
+border-color: #cccccc;
+padding: 8px;
+}
+
+/* 指定無し */
+img.mt-image-none{
+    margin: 0;
+}
+
+/* 画像左配置 */
+img.mt-image-left {
+    float: left;
+    margin: 0 20px 20px 0;
+}
+/* 画像中央配置 */
+img.mt-image-center {
+    display: block;
+    margin: 0 auto 20px;
+    text-align: center;
+}
+/* 画像右配置 */
+img.mt-image-right {
+    float: right;
+    margin: 0 0 20px 20px;
+}
+
+/* 表 */
+table {
+font-size: 92.30%; /* 12px相当 */
+margin-bottom: 1.5em;
+width: 670px;
+border: 1px #d0d0d0 solid;
+border-collapse: collapse;
+border-spacing: 0;
+}
+/* 表 見出し */
+th {
+font-weight: bold;
+color: #333333;
+background-color: #F6F6F6;
+text-align: left;
+border-width: 0 0 1px 1px;
+padding: 8px;
+border: 1px #d0d0d0 solid;
+white-space: nowrap;
+}
+
+/* 表 セル */
+td {
+    padding: 10px;
+    border: 1px #d0d0d0 solid;
+    border-width: 0 0 1px 1px;
+    text-align: left;
+}
+
+/* 会社概要用 */
+dl.info {
+font-size: 92.30%; /* 12px相当 */
+margin-bottom: 1.5em;
+}
+dl.info dt {
+padding-top: 0;
+padding-left: 0;
+padding-right: 0;
+padding-bottom: 0;
+}
+dl.info dd {
+line-height: 1.6;
+margin-top: -1.6em;
+margin-left: 9em;
+margin-right: 0;
+margin-bottom: .8em;
+border-bottom: 1px dotted #cccccc;
+}
+------------------------ここまで↑------------------------

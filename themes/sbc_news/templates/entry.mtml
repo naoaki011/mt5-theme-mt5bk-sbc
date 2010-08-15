@@ -1,0 +1,55 @@
+<mt:SetVars>
+    website_id=<mt:BlogParentWebsite><$mt:WebsiteID$></mt:BlogParentWebsite>
+    blog_name=お知らせ
+    title=<$mt:EntryTitle encode_html="1"$> - <$mt:BlogName encode_html="1"$> - <mt:BlogParentWebsite><$mt:WebsiteName encode_html="1"$></mt:BlogParentWebsite>
+</mt:SetVars>
+<$mt:Include module="変数設定" blog_id="$website_id"$>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ja" xml:lang="ja" xmlns="http://www.w3.org/1999/xhtml" id="sixapart-standard">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=<$mt:PublishCharset$>" />
+    <meta name="generator" content="<$mt:ProductName version="1"$>" />
+<$mt:Include module="ヘッダー" blog_id="$website_id"$>
+<mt:EntryPrevious>
+    <link rel="prev bookmark" href="<$mt:EntryPermalink$>" title="<$mt:EntryTitle encode_html="1"$>" />
+</mt:EntryPrevious>
+<mt:EntryNext>
+    <link rel="next bookmark" href="<$mt:EntryPermalink$>" title="<$mt:EntryTitle encode_html="1"$>" />
+</mt:EntryNext>
+    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="<mt:BlogParentWebsite><$mt:Link template="feed_recent"$></mt:BlogParentWebsite>" />
+<$mt:EntryTrackbackData$>
+    <script type="text/javascript" src="<$mt:Link template="javascript"$>"></script>
+    <title><$mt:Var name="title"$></title>
+</head>
+<body>
+    <$mt:Include module="Bodyヘッダー" blog_id="$website_id"$>
+    <div id="content">
+        <div class="content_inner">
+            <ul class="path">
+                <li><a href="<$mt:Var name="website_url"$>" title="トップ">トップ</a></li>
+                <li><a href="<$mt:BlogURL$>" title="<$mt:Var name="blog_name" encode_html="1"$>"><$mt:Var name="blog_name" encode_html="1"$></a></li>
+<mt:If tag="EntryCategory">
+                <li><a href="<$mt:EntryLink archive_type="Category"$>" title="<$mt:EntryCategory$>"><$mt:EntryCategory$></a></li>
+</mt:If>
+                <li><$mt:EntryTitle$></li>
+            </ul>
+            <div id="main">
+                <div class="inner">
+
+<$mt:Include module="ブログ記事の詳細" blog_id="$website_id"$>
+
+                </div><!-- / inner -->
+            </div><!-- / main -->
+            <div id="sub">
+                <div class="inner">
+<$mt:WidgetSet name="サイドバー"$>
+                </div><!-- / inner -->
+            </div><!-- / sub -->
+            <div class="to_head">
+                <a href="#header">このページの先頭へ</a>
+            </div>
+        </div><!-- / inner -->
+    </div><!-- / content -->
+    <$mt:Include module="Bodyフッター" blog_id="$website_id"$>
+</body>
+</html>

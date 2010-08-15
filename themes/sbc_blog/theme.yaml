@@ -1,0 +1,129 @@
+#
+# SBC Theme for Blog.
+#
+# Design by Mika Naniwada & GAMO, Toshihirro.
+# IA by GAMO, Toshihirro.
+# MarkUp by Yasuhisa Yanagi
+# Create Theme by Naoaki Onozaki.
+#
+# License Under Creative Commons Attribution-Share Alike 2.1 Japan
+#
+id: sbc_blog
+label: SBCブログのテーマ
+name: SBCブログのテーマ
+version: 1.0
+author_link: http://www.sbcr.jp/
+author_name: ソフトバンククリエイティブ
+class: blog
+description: |
+  SBC商事株式会社ブログのためのテーマです。
+  このテーマはソフトバンククリエイティブより出版された、書籍「Movable Type 5 実践テクニック」のサンプルとして作成されました。
+  ライセンス『Creative Commons - 表示-継承 2.1 日本』
+thumbnail_file: sbc-blog.png
+thumbnail_file_medium: sbc-blog-medium.png
+thumbnail_file_small: sbc-blog-small.png
+elements: 
+  blog_static_files: 
+    component: core
+    importer: blog_static_files
+    data: 
+      - images
+  default_categories: 
+    component: core
+    importer: default_categories
+    data: 
+      kenji_miyazawa: 
+        description: 宮澤賢治の作品紹介アーカイブです。
+        label: 宮澤賢治
+      ryunosuke_akutagwa: 
+        description: 芥川龍之介の作品紹介のアーカイブです。
+        label: 芥川龍之介
+      soseki_natsume: 
+        description: 夏目漱石の作品紹介のアーカイブです。
+        label: 夏目漱石
+  default_folders: 
+    component: core
+    importer: default_folders
+    data: 
+      images: 
+        label: 画像
+  template_set: 
+    component: core
+    importer: template_set
+    data: 
+      base_path: templates
+      label: exported_template set
+      templates: 
+        archive: 
+          category_entry_listing: 
+            label: カテゴリ別ブログ記事リスト
+            mappings: 
+              category: 
+                archive_type: Category
+                file_template: "%c/%i"
+                preferred: 1
+          monthly_entry_listing: 
+            label: 日付別ブログ記事リスト
+            mappings: 
+              monthly: 
+                archive_type: Monthly
+                file_template: "%y/%m/%i"
+                preferred: 1
+        index: 
+          archive_index: 
+            label: アーカイブインデックス
+            outfile: archives.html
+            rebuild_me: 1
+          javascript: 
+            label: Javascript
+            outfile: js/mt.js
+            rebuild_me: 1
+          main_index: 
+            label: メインページ
+            outfile: index.html
+            rebuild_me: 1
+          rsd: 
+            label: RSD
+            outfile: rsd.xml
+            rebuild_me: 1
+        individual: 
+          entry: 
+            label: ブログ記事
+            mappings: 
+              individual: 
+                archive_type: Individual
+                file_template: "%c/%b/%i"
+                preferred: 1
+        system: 
+          comment_listing: 
+            label: コメント一覧
+          comment_preview: 
+            label: コメントプレビュー
+          comment_response: 
+            label: コメント完了
+          dynamic_error: 
+            label: ダイナミックパブリッシングエラー
+          popup_image: 
+            label: ポップアップ画像
+          search_results: 
+            label: 検索結果
+        widget: 
+          archive_lists: 
+            label: アーカイブリスト
+          calendar: 
+            label: カレンダー
+          recent_entries: 
+            label: 最近の記事
+          syndication: 
+            label: 購読
+          tag_cloud: 
+            label: タグクラウド
+        widgetset: 
+          archivelist_widgetset: 
+            label: サイドバー
+            order: 1000
+            widgets: 
+              - アーカイブリスト
+              - 最近の記事
+              - タグクラウド
+              - 購読

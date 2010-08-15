@@ -1,0 +1,11 @@
+■リスト3-29　コメント投稿フォームにカスタムフィールドの入力欄を表示する
+-------------------------ここから↓-------------------------
+<input type="hidden" name="blog_id" value="<MTBlogID>" />
+<input type="hidden" name="customfield_beacon" value="1" id="customfield_beacon" />
+<mt:CommentCustomFields>
+<mt:SetVarBlock name="custom_field name"><$mt:CustomFieldName$></mt:SetVarBlock>
+<mt:SetVarBlock name="field-content"><$mt:CustomFieldHTML$></mt:SetVarBlock>
+<mt:SetVarBlock name="custom_field_id">profile_<$mt:CustomFieldName dirify="1"$></mt:SetVarBlock>
+<$mt:Include module="フォームフィールド" id="$custom_field_id" class="" label="$custom_field_name"$>
+</mt:CommentCustomFields>
+-------------------------ここまで↑-------------------------

@@ -1,0 +1,52 @@
+<mt:SetVars>
+    website_id=<$mt:WebsiteID$>
+    page_title=お問い合せ
+    page_folder=お問い合せ
+    title=<$mt:WebsiteName encode_html="1"$> : メールフォーム : メール送信完了
+</mt:SetVars>
+<mt:SetVarBlock name="bred_crumb"$>
+    <li><a href="<$mt:WebsiteURL$>">トップ</a></li>
+    <li><$mt:Var name="page_title"$></li>
+</mt:SetVarBlock>
+<$mt:Include module="変数設定"$>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ja" xml:lang="ja" xmlns="http://www.w3.org/1999/xhtml" id="sixapart-standard">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=<$mt:PublishCharset$>" />
+    <meta name="generator" content="<$mt:ProductName version="1"$>" />
+<$mt:Include module="ヘッダー"$>
+    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="<$mt:Link template="feed_recent"$>" />
+    <title><$mt:Var name="title"$></title>
+</head>
+<body>
+    <$mt:Include module="Bodyヘッダー"$>
+    <div id="content">
+        <div class="content_inner">
+            <ul class="path">
+                <$mt:GetVar name="bred_crumb"$>
+            </ul>
+            <div id="main">
+                <div class="inner">
+
+<div class="entry">
+    <h2>メール送信完了</h2>
+    <div class="entry_inner">
+        <p>メールを送信いただき、ありがとうございました。</p>
+        <p>弊社にて、お送りいただきました内容を確認の上、折り返しご連絡させていただきます。</p>
+        <p>また、ご記入いただきましたメールアドレスへ、確認のメールを送付させていただきました。<br />
+        （システムからの自動返信メールとなっております）</p>
+        <p>万が一、自動返信メールが届かない場合は、入力いただいたメールアドレスに間違いがあった可能性がございます。お手数をおかけいたしますが、再度お問い合わせいただきますよう、お願いいたします。</p>
+    </div><!-- / entry_inner -->
+</div><!-- / entry -->
+
+                </div><!-- / inner -->
+            </div><!-- / main -->
+            <$mt:Include module="サイドバー"$>
+            <div class="to_head">
+                <a href="#header">このページの先頭へ</a>
+            </div>
+        </div><!-- / inner -->
+    </div><!-- / content -->
+    <$mt:Include module="Bodyフッター"$>
+</body>
+</html>

@@ -1,0 +1,242 @@
+以下「3-9テーマのカスタマイズ」の例で用いたソースです。
+書籍の見出しごとに区切っておりますので、点線（---）内をコピーしてご利用ください。
+
+
+P192　◇メイン画像
+------------------------------------------------------------
+<img src="<$mt:var name="website_url"$>blogimg/image.png" alt="" width="960" height="200" />
+------------------------------------------------------------
+
+
+P194　◇バナー画像
+------------------------------------------------------------
+<li><a href="http://www.google.co.jp"><img src="<$mt:var name="website_url"$>blogimg/banner.png" alt="Google" width="254" height="70" /></a></li>
+------------------------------------------------------------
+
+
+P197　◇メインメニュー
+■リスト3-15　変更例
+------------------------------------------------------------
+/* ナビゲーション */
+div#nav {
+color: #ffffff;
+background-color: #CC0000;
+background-image: url(../blogimg/nav_bg.png);
+background-position: left center;
+background-repeat: repeat-x;
+border-top-width: 1px;
+border-top-style: solid;
+border-top-color: #585C5F;
+}
+------------------------------------------------------------
+
+
+P197　◇フッターメニュー
+■リスト3-16　変更例（content.css175 行目）
+------------------------------------------------------------
+body {
+font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Verdana, Arial, Helvetica, "ＭＳ Ｐゴシック", "MS P Gothic", Osaka, sans-serif;
+color: #ffffff;
+background-color: #CC0000;
+line-height: 1.5;
+}
+------------------------------------------------------------
+
+
+P199　◇メインメニューのリンク色
+■リスト3-17　アクティブページの変更例
+------------------------------------------------------------
+div#nav li a {
+text-decoration: none;
+color: #ffffff;
+background-color: transparent;
+background-image: url(../blogimg/nav_li.png);
+background-position: left center;
+background-repeat: no-repeat;
+padding-top: 4px;
+padding-left: 10px;
+padding-right: 10px;
+padding-bottom: 4px;
+display: block;
+}
+
+
+div#nav li.on a {
+color: #ffcc00;
+background-color: transparent;
+}
+------------------------------------------------------------
+
+
+P199　◇コンテントのリンク色
+■リスト3-18　コンテントのリンク色の変更例
+------------------------------------------------------------
+div#content a: {
+text-decoration: underline;
+color: #336699;
+background-color: transparent;
+}
+
+div#content a:link {
+text-decoration: underline;
+color: #FF3300;
+background-color: transparent;
+}
+div#content a:link:hover {
+text-decoration: underline;
+color: #666666;
+background-color: transparent;
+}
+div#content a:link:active {
+text-decoration: underline;
+color: #ff3300;
+background-color: transparent;
+}
+div#content a:visited {
+text-decoration: underline;
+color: #990000;
+background-color: transparent;
+}
+div#content a:visited:hover {
+text-decoration: underline;
+color: #666666;
+background-color: transparent;
+}
+div#content a:visited:active {
+text-decoration: underline;
+color: #990000;
+background-color: transparent;
+}
+------------------------------------------------------------
+
+
+P200　◇フッタのリンク色
+■リスト3-19　CSS の変更（content.css1392 行目）
+------------------------------------------------------------
+div#footer a {
+color: #ffcc00;
+background-color: transparent;
+}
+------------------------------------------------------------
+
+
+P201　◇フッタのリンク色
+■リスト3-20　CSS の変更（content.css1419 行目）
+------------------------------------------------------------
+div#footer div.b_nav ul li.on a {
+color: #ffffff;
+background-color: transparent;
+}
+------------------------------------------------------------
+
+
+P200　◇h2
+トップページに配置したメインコンテンツの2分の1幅の見出し
+■リスト3-21　CSS の変更（content.css481 行目）
+------------------------------------------------------------
+div.area h2 {
+font-size: 107.69%; /* 14px相当 */
+font-weight: bold;
+color: #ffff00;
+background-color: #0033CC;
+background-image: url(../blogimg/h2_h.png);
+background-position: left top;
+background-repeat: repeat-y;
+padding-top: 5px;
+padding-left: 10px;
+padding-right: 10px;
+margin-bottom: 10px;
+padding-bottom: 5px;
+}
+------------------------------------------------------------
+
+
+P202　トップページ以外のh2
+■リスト3-22　CSS の変更（content.css679 行目）
+------------------------------------------------------------
+div#main div.entry h2 {
+font-size: 107.69%;
+font-weight: bold;
+color: #ffffff;
+background-color: #0033CC;
+background-image: url(../blogimg/h2.png);
+background-position: left top;
+background-repeat: repeat-y;
+padding-top: 5px;
+padding-left: 10px;
+padding-right: 10px;
+margin-bottom: 1em;
+padding-bottom: 5px;
+clear: both;
+}
+------------------------------------------------------------
+
+
+P202　◇h3
+■リスト3-23　CSS の変更（content.css699 行目）
+------------------------------------------------------------
+div#main div.entry h3 {
+font-size: 107.69%;
+font-weight: bold;
+color: #333333;
+padding-top: 0px;
+border-left-width: 10px;
+border-left-style: solid;
+border-left-color: #990000;
+padding-left: 10px;
+padding-right: 10px;
+margin-bottom: 1em;
+padding-bottom: 0px;
+clear: both;
+}
+------------------------------------------------------------
+
+
+P203　◇h4
+■リスト3-24　CSS の変更（content.css711 行目）
+------------------------------------------------------------
+div#main div.entry h4 {
+font-size: 100%; /* 13px相当 */
+font-weight: bold;
+margin-bottom: .7em;
+border-bottom-width: 1px;
+border-bottom-style: solid;
+border-bottom-color: #0033cc;
+padding-bottom: 5px;
+clear: both;
+}
+------------------------------------------------------------
+
+
+P204　◇商品案内以外の表
+■リスト3-25　商品案内以外の表の変更（CSS）：content.css851 行目
+------------------------------------------------------------
+/* 表 */
+div#main div.entry table {
+font-size: 92.30%; /* 12px相当 */
+margin-bottom: 1.5em;
+width: 670px;
+border: 1px #000000 solid;
+border-collapse: collapse;
+border-spacing: 0;
+}
+/* 表 見出し */
+div#main div.entry th {
+font-weight: bold;
+color: #333333;
+background-color: #CCCCCC;
+text-align: left;
+border-width: 0 0 1px 1px;
+padding: 8px;
+border: 1px #000000 solid;
+white-space: nowrap;
+}
+
+/* 表 セル */
+div#main div.entry td {
+padding: 10px;
+border: 1px #000000 solid;
+border-width: 0 0 1px 1px;
+text-align: left;
+}
+------------------------------------------------------------

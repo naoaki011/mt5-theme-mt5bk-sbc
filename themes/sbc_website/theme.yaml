@@ -1,0 +1,448 @@
+#
+# SBC Theme for Website.
+#
+# Design by Mika Naniwada & GAMO, Toshihirro.
+# IA by GAMO, Toshihirro.
+# MarkUp by Yasuhisa Yanagi
+# Create Theme by Naoaki Onozaki.
+#
+# License Under Creative Commons Attribution-Share Alike 2.1 Japan
+#
+id: sbc_website
+label: SBCのテーマ
+name: SBCのテーマ
+version: 1.0
+author_link: http://www.sbcr.jp/
+author_name: ソフトバンククリエイティブ
+class: website
+description: |
+  SBC商事株式会社ウェブサイトのためのテーマです。
+  このテーマはソフトバンククリエイティブより出版された、書籍「Movable Type 5 実践テクニック」のサンプルとして作成されました。
+  ライセンス『Creative Commons - 表示-継承 2.1 日本』
+required_components: 
+  commercial: 1.50
+#  SortCatFld: 1.10
+optional_components: 
+#  Get Query Param: 1.13
+  mailform: 2.20
+thumbnail_file: sbc-website.png
+thumbnail_file_medium: sbc-website-medium.png
+thumbnail_file_small: sbc-website-small.png
+elements: 
+  blog_static_files: 
+    component: core
+    importer: blog_static_files
+    data: 
+      - blogimg
+      - js
+  custom_fields: 
+    component: commercial
+    importer: custom_fields
+    data: 
+      company: 
+        default: ''
+        description: '会社名を入力してください'
+        name: 社名
+        obj_type: page
+        options: ~
+        required: 0
+        tag: PageDataCompany
+        type: text
+      googleanalyticsaccount: 
+        default: ''
+        description: 設定したGoogle Analytics Accountを入力します
+        name: Google Analytics Account
+        obj_type: page
+        options: ~
+        required: 0
+        tag: PageDataGoogleanalyticsaccount
+        type: text
+      googlecustomsearch: 
+        default: ''
+        description: 'Googleカスタム検索で取得した検索IDを入力します'
+        name: Google Custom Search 検索ID
+        obj_type: page
+        options: ~
+        required: 0
+        tag: PageDataGooglecustomsearch
+        type: text
+      googlemapsapi: 
+        default: ''
+        description: 取得したGoogle Maps API Keyを入力します
+        name: Google Maps API
+        obj_type: page
+        options: ~
+        required: 0
+        tag: PageDataGooglemapsapi
+        type: text
+      place: 
+        default: ''
+        description: '会社住所を入力してください'
+        name: 住所
+        obj_type: page
+        options: ~
+        required: 0
+        tag: PageDataPlace
+        type: text
+  default_pages: 
+    component: core
+    importer: default_pages
+    data: 
+      history: 
+        title: 会社沿革
+        text: |
+          <p>SBCの歴史は世界中の人々と共に歩む平和の歴史です。</p>
+          <dl class="info">
+          <dt>1994年11月</dt>
+          <dd>ジョージ・Ｗ・ブッシュにより防衛関連補用部品等の輸入販売を主事業とした日本SBCとして設立</dd>
+          <dt>1999年3月</dt>
+          <dd>SBC株式会社に商号変更</dd>
+          <dt>2002年9月</dt>
+          <dd>ボーイング社製品輸入開始</dd>
+          <dt>2007年4月</dt>
+          <dd>AMゼネラル社製品輸入開始</dd>
+          <dt>2009年12月</dt>
+          <dd>宇宙航空研究開発機構（JAXA）へ宇宙服納入</dd>
+          <dt>2011年1月</dt>
+          <dd>資本金1億円に増資</dd>
+          </dl>
+        tags: @info
+        folder: info
+      index: 
+        title: 会社概要
+        text: |
+          <p>SBC株式会社は平和に貢献することをミッションとしたプロフェッショナル集団です</p>
+          <dl class="info">
+          <dt>商号</dt>
+          <dd>SBC株式会社</dd>
+          <dt>設立日</dt>
+          <dd>1999年3月</dd>
+          <dt>資本金</dt>
+          <dd>100,000,000円</dd>
+          <dt>代表取締役</dt>
+          <dd>ジョージ・Ｗ・ブッシュ</dd>
+          <dt>取引銀行</dt>
+          <dd>USJ銀行・TDL銀行</dd>
+          <dt>所在地</dt>
+          <dd>〒107-0052　東京都港区赤坂 4-13-13<br />
+          電話（代表） 03-XXXX-XXXX<br />
+          FAX 03-XXXX-XXXX</dd>
+          <dt>従業員数</dt>
+          <dd>206名（海外駐在社員含む)</dd>
+          <dt>主な事業内容</dt>
+          <dd>宇宙・防衛関連機器、支援機材、補用部品等の輸入販売</dd>
+          </dl>
+        tags: @info
+        folder: info
+      top_comment: 
+        title: 代表挨拶
+        text: |
+          <p><img alt="代表取締役　ジョージ・Ｗ・ブッシュ" class="mt-image-left" height="238" src="../blogimg/president.jpg" width="180" /></p>
+          <p><span style="font-weight: bold; font-size: medium;">平和に貢献する<br />
+          プロフェッショナル集団を目指します</span></p>
+          <p>　当社は宇宙・防衛関連機器、支援機材、補用部品等の輸入販売を行う専門商社です。</p>
+          <p>有史以来人々の生活は平穏と不安を繰り返してきました。<br />
+          1903年12月17日ライト兄弟がキティーホークの砂丘で僅か数人の立会人を前に空への扉を開けて以来、航空機の重要性は加速度的に高まりました。</p>
+          <p>常に世界のめまぐるしい変化に対応し、国内・外のメーカーと提携する事により世界最先端技術の発信基地として、戦略的なマーケティング活動を展開します。</p>
+          <p>さらに我々は、常に創造的立場に立って社会のニーズに対応した商品・サービスにより、公正な事業活動を通じて平和に貢献し市場にバリューを提供できるプロフェッショナル集団になることを目指してまいります。</p>
+          <div style="text-align: right;"><span style="font-weight: bold; font-size: medium;">代表取締役　ジョージ・Ｗ・ブッシュ</span></div>
+        tags: @info
+        folder: info
+      access: 
+        title: アクセスマップ
+        text: |
+          <h3 id="map1">本社所在地</h3>
+          <p>〒107-0052 東京都港区赤坂 4-13-13<br />
+          TEL 03-xxx-xxxx<br />
+          FAX 03-xxxx-xxxx</p>
+          <h4>最寄り駅よりのご案内</h4>
+          <ul>
+          <li>千代田線「赤坂駅」より徒歩約9分</li>
+          <li>銀座線・半蔵門線・大江戸線「青山一丁目駅」より徒歩約10分</li>
+          <li>銀座線・丸の内線「赤坂見附駅」より徒歩約12分</li>
+          </ul>
+        tags: @info
+        folder: info
+      greeting/index: 
+        title: 夜景は平和の象徴です
+        text: |
+          <p>SBCの歴史は世界中の人々と共に歩む平和の歴史です。</p>
+          <p>人々の目を和ませるロマンチックな夜景も、緊急時の管制下では見ることができません。平和であり人々が潤ってこその光景です。とはいえ、未だに世界に争いは絶え間なくあり夜景を楽しめない人々も大勢います。一部の間違った人々から多くの人類を守るためにも軍備は必要産業です。やむをえず過酷な環境に出向き、再び夜景を見るために必要な製品は、食事から航空母艦に至るまで、すべて私たちが取りそろえます。そして世界中の人々が夜景を楽しめ、希望は宇宙へと。SBCはそんな、世界の恒久平和と、人類の輝かしい未来を願う企業です。</p>
+        tags: @greeting
+        folder: 
+      ../privacy/index: 
+        title: プライバシーポリシー
+        text: |
+          <h3>個人情報保護</h3>
+          <ul>
+          <li>株式会社 SBC株式会社（以下「当社」）は、お客様のプライバシー・個人情報及び設定内容などを保護することは、当社が事業活動を行う上での責務と考えています。</li>
+          <li>当社ウェブページからのお申込、お問い合わせ、申込書によるお申込、メール・電話によるお問い合わせを問わず、お客様から明示された特定の個人を識別できる情報（以下「個人情報」）について下記のとおり取り扱うものとします。</li>
+          <li>個人情報とはお客様を識別できる情報のことで、氏名、住所、電話番号、メールアドレスなどをいいます。</li>
+          <li>当社が個人情報を収集する場合は、収集目的を明らかにし、必要な範囲内の個人情報を収集いたします。</li>
+          <li>当社は取得した個人情報について適切な管理に努めると共に個人情報の漏洩、改ざん、不正な侵入の防止に努めます。</li>
+          <li>当社は取得した個人情報を次の各項の場合を除いて、原則として第三者に提供、開示などいたしません。
+          <ol>
+          <li>法律上照会権限を有する者から書面による正式な協力要請、照会があった場合</li>
+          <li>お客様の同意があった場合</li>
+          </ol>
+          </li>
+          <li>お客様が、ご自身の個人情報について照会、修正などを希望される場合には、当社が定める方法によりお客様であることが確認できた場合に限り対応させていただきます。</li>
+          <li>当社は、当社が保有する個人情報に関して適用される日本の法令、その他規範を遵守するとともに、本ポリシーの内容を適宜見直し、その改善に努めます。</li>
+          </ul>
+          <p>2005年4月1日制定</p>
+          <h3>個人情報の取り扱いに関する問合せ先</h3>
+          <p>個人情報に関するご確認、ご要望およびお問合せなどにつきましては、以下の連絡先までお願いいたします。</p>
+          <p>SBC株式会社<br />
+          〒107-0052　東京都港区赤坂 4-13-13<br />
+          電話（代表） 03-XXXX-XXXX FAX 03-XXXX-XXXX</p>
+        tags: 
+        folder: privacy
+      ../offer/index: 
+        title: 採用情報
+        text: |
+          <p>SBCでは、現在次の職種について、募集を行なっております。（2010年2月25日更新）</p>
+          <table summary="採用情報詳細">
+          <tbody>
+          <tr>
+          <th>募集職種</th>
+          <td>広報スタッフ</td>
+          </tr>
+          <tr>
+          <th>仕事内容</th>
+          <td>当社で初めての広報スタッフとなります。部門を作ると共に、事業を一緒に大きくしていきましょう。 <br />
+          広報の仕事に加えて、コンサルティング業務など兼任して様々な業務にも携わっていただく予定です。</td>
+          </tr>
+          <tr>
+          <th>雇用形態</th>
+          <td>正社員(中途)</td>
+          </tr>
+          <tr>
+          <th>応募資格</th>
+          <td>広報、IRに携わった実務経験</td>
+          </tr>
+          <tr>
+          <th>勤務地</th>
+          <td>東京本社</td>
+          </tr>
+          <tr>
+          <th>勤務時間</th>
+          <td>10：00～19：00</td>
+          </tr>
+          <tr>
+          <th>給与</th>
+          <td>年俸320万円 ～<br />
+          経験・能力・前給を考慮の上、当社規定によって決定させていただきます。</td>
+          </tr>
+          <tr>
+          <th>待遇・福利厚生</th>
+          <td>交通費一部支給 (月3万円まで)、年1回給与査定、社会保険完備</td>
+          </tr>
+          <tr>
+          <th>休日・休暇</th>
+          <td>完全週休2日制(土日)、祝日、年末年始休暇、有給休暇</td>
+          </tr>
+          </tbody>
+          </table>
+          <p>当社採用担当までご連絡の上、履歴書・経歴書を郵送お願いいたします。</p>
+        tags: 
+        folder: offer
+      ../properties/index: 
+        title: 設定用
+        text: 
+          <p>このページは設定用であり、コンテンツは存在しません</p>
+        tags: @settings
+        folder: properties
+  default_folders: 
+    component: core
+    importer: default_folders
+    data: 
+      blog: 
+        description: ＳＢＣ商事株式会社ブログ
+        label: ブログ
+      info: 
+        description: ＳＢＣ商事株式会社案内
+        label: 会社案内
+      inquiry: 
+        description: お問い合せメールフォーム
+        label: お問い合せ
+      news: 
+        description: ＳＢＣ商事株式会社からのお知らせです。
+        label: お知らせ
+      offer: 
+        description: ＳＢＣ商事株式会社採用情報
+        label: 採用情報
+      privacy: 
+        description: ＳＢＣ商事株式会社のプライバシーポリシー
+        label: プライバシーポリシー
+      products: 
+        description: ＳＢＣ商事株式会社の取扱商品
+        label: 商品案内
+      properties: 
+        description: 各種設定のためにテーマが使用しています
+        label: 設定用
+      sitemap: 
+        description: ＳＢＣ商事株式会社サイトマップ
+        label: サイトマップ
+  template_set: 
+    component: core
+    importer: template_set
+    data: 
+      base_path: templates
+      label: exported_template set
+      templates: 
+        index: 
+          content_css: 
+            label: content.css
+            outfile: css/content.css
+            rebuild_me: 1
+          feed_recent: 
+            label: 最新記事のフィード
+            outfile: atom.xml
+            rebuild_me: 1
+          fonts_css: 
+            label: fonts.css
+            outfile: css/fonts.css
+            rebuild_me: 1
+          javascript: 
+            label: JavaScript
+            outfile: js/mt.js
+            rebuild_me: 1
+          mail_form: 
+            label: mail_form:メールフォーム
+            outfile: inquiry/index.html
+            rebuild_me: 1
+          main_index: 
+            label: メインページ
+            outfile: index.html
+            rebuild_me: 1
+          reset_css: 
+            label: reset.css
+            outfile: css/reset.css
+            rebuild_me: 1
+          robots: 
+            label: robots.txt
+            outfile: robots.txt
+            rebuild_me: 1
+          rsd: 
+            label: RSD
+            outfile: rsd.xml
+            rebuild_me: 1
+          search_page: 
+            label: カスタム検索
+            outfile: search/index.html
+            rebuild_me: 1
+          sitemap: 
+            label: サイトマップ
+            outfile: sitemap/index.html
+            rebuild_me: 1
+          sitemap_xml: 
+            label: XMLサイトマップ
+            outfile: sitemap.xml
+            rebuild_me: 1
+          styles: 
+            label: スタイルシート
+            outfile: css/styles.css
+            rebuild_me: 1
+        module: 
+          body_footer: 
+            label: Bodyフッター
+          body_header: 
+            label: Bodyヘッダー
+          comment_detail: 
+            label: コメント詳細
+          entry_detail: 
+            label: ブログ記事の詳細
+          entry_summary: 
+            label: ブログ記事の概要
+          google_analytics: 
+            label: GoogleAnalytics
+          google_maps: 
+            label: GoogleMapsScript
+          header: 
+            label: ヘッダー
+          mail_body: 
+            label: mail_body:メール本文
+          mail_common: 
+            label: mail_common:メールフォーム共通部分
+          mail_error: 
+            label: mail_error:送信エラー
+          mail_post: 
+            label: mail_post:送信完了
+          mail_preview: 
+            label: mail_preview:送信確認
+          mail_reply: 
+            label: mail_reply:返信メール
+          navigation_links: 
+            label: ナビゲーションリンク
+          page_detail: 
+            label: ウェブページの詳細
+          search_module: 
+            label: 検索窓
+          set_variables: 
+            label: 変数設定
+          sidebar_module: 
+            label: サイドバー
+        page: 
+          page: 
+            label: ウェブページ
+            mappings: 
+              page: 
+                archive_type: Page
+                file_template: "%c/%f"
+                preferred: 1
+        system: 
+          comment_listing: 
+            label: コメント一覧
+          comment_preview: 
+            label: コメントプレビュー
+          comment_response: 
+            label: コメント完了
+          dynamic_error: 
+            label: ダイナミックパブリッシングエラー
+          popup_image: 
+            label: ポップアップ画像
+          search_results: 
+            label: 検索結果
+        widget: 
+          archive_lists: 
+            label: アーカイブリスト
+          blogentry_listing: 
+            label: ブログ・記事リスト
+          calendar_widget: 
+            label: カレンダー
+          infomation_widget: 
+            label: 会社案内メニュー
+          recent_entries: 
+            label: 最近の記事
+          sidebar_banner1: 
+            label: サイドバーバナー1
+          sidebar_banner2: 
+            label: サイドバーバナー2
+          syndication: 
+            label: 購読
+          tagcloud_widget: 
+            label: タグクラウド
+        widgetset: 
+          information_widgetset: 
+            label: 会社案内サイドバー
+            order: 1000
+            widgets: 
+              - 会社案内メニュー
+              - サイドバーバナー1
+              - サイドバーバナー2
+              - 購読
+          main_widgetset: 
+            label: サイトメインページ
+            order: 1000
+            widgets: 
+              - サイドバーバナー1
+              - サイドバーバナー2
+              - ブログ・記事リスト
+              - 購読
+          normal_widgetset: 
+            label: 通常サイドバー
+            order: 1000
+            widgets: 
+              - サイドバーバナー1
+              - サイドバーバナー2
+              - 購読

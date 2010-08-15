@@ -1,0 +1,135 @@
+<div class="entry">
+    <h2><$mt:EntryTitle$></h2>
+    <div class="posted">
+        <p><$mt:EntryAuthorLink show_hcard="1"$> （<$mt:EntryDate format="%x %X"$>）<mt:Unless name="hide_counts" eq="1"><mt:IfCommentsActive>｜<a href="<$mt:EntryPermalink$>#comments"><$mt:EntryCommentCount singular="コメント(1)" plural="コメント(#)" none="コメント(0)"$></a></mt:IfCommentsActive>｜<mt:IfPingsActive><span class="separator">|</span> <a href="<$mt:EntryPermalink$>#trackbacks"><$mt:EntryTrackbackCount singular="トラックバック(1)" plural="トラックバック(#)" none="トラックバック(0)"$></a></mt:IfPingsActive></mt:Unless></p>
+    </div>
+    <div class="entry_inner">
+<$mt:EntryBody$>
+<mt:if tag="EntryMore" strip_linefeeds="1" trim="1">
+        <div id="more">
+<$mt:EntryMore$>
+        </div><!-- / more -->
+</mt:if>
+<mt:if tag="EntryCategories">
+        <div class="entry-cates">
+            <h3 class="entry-cates-header">カテゴリ:</h3>
+            <ul class="entry-cates-list">
+<mt:EntryCategories>
+                <li class="entry-cate"><a href="<$mt:CategoryArchiveLink$>" rel="tag"><$mt:CategoryLabel$></a></li>
+</mt:EntryCategories>
+            </ul>
+        </div>
+</mt:if>
+<mt:if tag="EntryTags">
+        <div class="entry-tags">
+            <h3 class="entry-tags-header">タグ:</h3>
+            <ul class="entry-tags-list">
+<mt:EntryTags>
+                <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='<$mt:TagSearchLink encode_js="1"$>';return false;" rel="tag"><$mt:TagName$></a></li>
+</mt:EntryTags>
+            </ul>
+        </div>
+</mt:if>
+    </div><!-- / entry_inner -->
+<mt:IfPingsActive>
+    <div class="entry_inner">
+    <h3 id="trackbacks">トラックバック</h3>
+<mt:IfPingsAccepted>
+        <p>トラックバックURL: <$mt:EntryTrackbackLink$></p>
+</mt:IfPingsAccepted>
+<mt:Pings>
+<mt:PingsHeader>
+        <div class="trackbacks-content">
+</mt:PingsHeader>
+            <div class="trackback" id="ping-<$mt:PingID$>">
+                <div class="inner">
+                    <div class="trackback-header">
+                        <div class="asset-meta">
+                            <$mt:PingBlogName$> - <a href="<$mt:PingURL$>"><$mt:PingTitle$></a> (<a href="#ping-<$mt:PingID$>"><$mt:PingDate$></a>)
+                        </div>
+                    </div>
+                    <div class="trackback-content">
+                        <p>
+                            <$mt:PingExcerpt$> <a href="<$mt:PingURL$>">続きを読む</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+<mt:PingsFooter>
+        </div>
+</mt:PingsFooter>
+</mt:Pings>
+    </div><!-- / entry_inner -->
+</mt:IfPingsActive>
+<mt:IfCommentsActive>
+    <div class="entry_inner">
+        <div id="comments" class="comments">
+<mt:Comments lastn="$comments_per_page">
+<mt:CommentsHeader>
+            <h3 class="comments-header"><$mt:EntryCommentCount singular="コメント(1)" plural="コメント(#)" none="コメント(0)"$></h3>
+            <div id="comments-content" class="comments-content" style="clear: left;">
+</mt:CommentsHeader>
+                <$mt:Include module="コメント詳細" blog_id="$website_id"$>
+<mt:CommentsFooter>
+            </div>
+</mt:CommentsFooter>
+</mt:Comments>
+<mt:IfCommentsAccepted>
+            <div class="comments-open" id="comments-open">
+                <h3 class="comments-open-header">コメントする</h3>
+                <div class="comments-open-content">
+                    <div id="comment-greeting"></div>
+<form method="post" action="<$mt:CGIPath$><$mt:CommentScript$>" name="comments_form" id="comments-form" onsubmit="return mtCommentOnSubmit(this)">
+    <input type="hidden" name="static" value="1" />
+    <input type="hidden" name="entry_id" value="<$mt:EntryID$>" />
+    <input type="hidden" name="__lang" value="<$mt:BlogLanguage$>" />
+    <input type="hidden" name="parent_id" value="<$mt:CommentParentID escape="html"$>" id="comment-parent-id" />
+    <input type="hidden" name="armor" value="1" />
+    <input type="hidden" name="preview" value="" />
+    <input type="hidden" name="sid" value="" />
+    <div id="comments-open-data">
+        <div id="comment-form-name">
+            <label for="comment-author">名前</label>
+            <input id="comment-author" name="author" size="30" value="" onfocus="mtCommentFormOnFocus()" />
+        </div>
+        <div id="comment-form-email">
+            <label for="comment-email">電子メール</label>
+            <input id="comment-email" name="email" size="30" value="" onfocus="mtCommentFormOnFocus()" />
+        </div>
+        <div id="comment-form-url">
+            <label for="comment-url">URL</label>
+            <input id="comment-url" name="url" size="30" value="" onfocus="mtCommentFormOnFocus()" />
+        </div>
+        <div id="comment-form-remember-me">
+            <input type="checkbox" id="comment-bake-cookie" name="bakecookie" onclick="mtRememberMeOnClick(this)" value="1" accesskey="r" />
+            <label for="comment-bake-cookie">ログイン情報を記憶</label>
+        </div>
+    </div>
+    <div id="comment-form-reply" style="display:none">
+        <input type="checkbox" id="comment-reply" name="comment_reply" value="" onclick="mtSetCommentParentID()" />
+        <label for="comment-reply" id="comment-reply-label"></label>
+    </div>
+    <div id="comments-open-text">
+        <label for="comment-text">コメント
+        <mt:IfAllowCommentHTML>(スタイル用のHTMLタグを使えます)</mt:IfAllowCommentHTML></label>
+        <textarea id="comment-text" name="text" rows="15" cols="50" onfocus="mtCommentFormOnFocus()"></textarea>
+    </div>
+    <div id="comments-open-captcha"></div>
+    <div id="comments-open-footer">
+        <input type="submit" accesskey="v" name="preview_button" id="comment-preview" value="プレビュー" onclick="this.form.preview.value='1';" />
+        <input type="submit" accesskey="s" name="post" id="comment-submit" value="投稿" />
+    </div>
+</form>
+                </div>
+            </div>
+<script type="text/javascript">
+<!--
+mtAttachEvent("load", mtEntryOnLoad);
+mtAttachEvent("unload", mtEntryOnUnload);
+//-->
+</script>
+</mt:IfCommentsAccepted>
+        </div>
+    </div><!-- / entry_inner -->
+</mt:IfCommentsActive>
+</div><!-- / entry -->

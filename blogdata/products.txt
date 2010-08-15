@@ -1,0 +1,565 @@
+AUTHOR: dakiny
+TITLE: スペース・シャトル(Space Shuttle)
+BASENAME: space_shuttle
+STATUS: Publish
+ALLOW COMMENTS: 0
+CONVERT BREAKS: richtext
+ALLOW PINGS: 0
+PRIMARY CATEGORY: 宇宙機
+CATEGORY: 宇宙機
+DATE: 02/23/2010 02:35:07 AM
+-----
+BODY:
+<p>
+	スペースシャトルは、アメリカ合衆国のNASA（アメリカ航空宇宙局）によって、有人宇宙飛行のために使用されている宇宙船です。</p>
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+-----
+CF50_ACTIONDISTANCE:  
+CF50_HEIGHT: 56.1m
+-----
+CF50_ENGINE:
+軌道操縦ロケット2機（軌道船のみ）
+-----
+CF50_OPERATIONMETHOD:  
+CF50_EFFECTIVERANGE:  
+CF50_SIZE:  
+CF50_FLYINGRANGE:  
+CF50_DIAMETER: 8.69m
+CF50_OUTPUT: 真空推力53.4kN (5.4トン)
+CF50_BULLET:  
+CF50_LENGTH:  
+CF50_USE: 一部再使用型有人宇宙船
+CF50_ALTITUDE: 約185km～5７７km
+-----
+CF50_WEIGHT:
+2,030トン
+-----
+CF50_CRUISINGSPEED:  
+CF50_CAPACITY: 7名
+-----
+CF50_MAKER:
+ユナイテッド・スペース・アライアンス（合衆国宇宙開発同盟）:
+サイオコール/アライアント・テックシステム（固体燃料補助ロケット）
+ロッキード・マーチン（外部燃料タンク）
+ロックウェル/ボーイング（軌道船）
+-----
+CF50_REMARKS:  
+CF50_NUMBER: 1箱
+CF50_MATERIAL:  
+CF50_COLOR:  
+CF50_PRICE: 約18億ドル（本体のみ）、移動費、打ち上げ費用は別途
+CF50_MAXIMUMSPEED:  
+CF50_WIDTH:  
+CF50_COUNTRY: アメリカ合衆国
+--------
+AUTHOR: dakiny
+TITLE: 宇宙服
+BASENAME: space_suit
+STATUS: Publish
+ALLOW COMMENTS: 0
+CONVERT BREAKS: richtext
+ALLOW PINGS: 0
+PRIMARY CATEGORY: 衣類
+CATEGORY: 衣類
+DATE: 02/23/2010 01:17:17 PM
+TAGS: NASA,アポロ,スペースシャトル
+-----
+BODY:
+<p>
+	宇宙飛行士が宇宙空間で安全に生存するために着用する、生命維持装置を備えた気密服です。耐熱、耐寒、気圧をすべてクリアして数時間の船外活動を可能とします。</p>
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+-----
+CF50_ACTIONDISTANCE:  
+CF50_OPERATIONMETHOD:  
+CF50_EFFECTIVERANGE:  
+CF50_SIZE: 宇宙飛行士の身体サイズに応じてオーダーメイド
+CF50_FLYINGRANGE:  
+CF50_DIAMETER:  
+CF50_OUTPUT:  
+CF50_BULLET:  
+CF50_LENGTH:  
+CF50_USE: 宇宙船外活動服
+CF50_ALTITUDE:  
+CF50_CRUISINGSPEED:  
+CF50_CAPACITY:  
+-----
+CF50_MAKER:
+ハミルトン・サンドストランド
+-----
+CF50_MAINROTOR:  
+CF50_REMARKS: 注文により制作承ります
+CF50_PRICE: 10,080,000円（本体価格 9,600,000円 + 消費税 480,000円）
+CF50_MATERIAL:  
+CF50_COLOR: 白
+CF50_MAXIMUMSPEED:  
+CF50_WIDTH:  
+CF50_COUNTRY: アメリカ合衆国
+--------
+AUTHOR: dakiny
+TITLE: GAU-8 アヴェンジャー（GAU-8 Avenger ）
+BASENAME: gau-8_avenger
+STATUS: Publish
+ALLOW COMMENTS: 0
+CONVERT BREAKS: richtext
+ALLOW PINGS: 0
+PRIMARY CATEGORY: 火器
+CATEGORY: 火器
+DATE: 02/23/2010 03:50:02 AM
+TAGS: A-10,ガトリング砲
+-----
+BODY:
+<p>
+	GAU-8 アヴェンジャーは、アメリカ空軍のA-10 サンダーボルトII等に搭載され、アメリカ軍の航空機搭載機関砲のなかで最大最重量にして、最強の攻撃力を誇る30mmガトリング砲です。主に対戦車攻撃に利用され、強力な30mm弾を高初速、高サイクルで発射して威力を発揮します。Avengerとは復讐者を意味します。<br />
+	&nbsp;</p>
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+-----
+CF50_NUMBEROFBULLETS: 1,350発
+CF50_ACTIONDISTANCE:  
+CF50_OPERATIONMETHOD: 電気モーター・油圧回転方式 × 2
+CF50_EFFECTIVERANGE: 1,220 m
+CF50_SIZE:  
+CF50_FLYINGRANGE:  
+CF50_DIAMETER:  
+CF50_OUTPUT:  
+CF50_BULLET: 30 × 173 mm
+CF50_LENGTH: 2.299 m（銃身長）
+CF50_USE: 回転式多砲身機関砲
+CF50_ALTITUDE:  
+-----
+CF50_WEIGHT:
+281 kg(銃本体) 
+1,830kg(システム重量)
+-----
+CF50_CRUISINGSPEED:  
+CF50_CAPACITY:  
+CF50_DISCHARGESPEED: 毎分3,900発
+-----
+CF50_MAKER:
+ゼネラル・エレクトリック
+-----
+CF50_MAINROTOR:  
+CF50_REMARKS:  
+CF50_MATERIAL:  
+CF50_COLOR:  
+CF50_PRICE:  
+CF50_MAXIMUMSPEED:  
+CF50_WIDTH:  
+CF50_COUNTRY: アメリカ合衆国
+--------
+AUTHOR: dakiny
+TITLE: M61 バルカン (M61 Vulcan)
+BASENAME: m61_vulcan
+STATUS: Publish
+ALLOW COMMENTS: 0
+CONVERT BREAKS: richtext
+ALLOW PINGS: 0
+PRIMARY CATEGORY: 火器
+CATEGORY: 火器
+DATE: 02/23/2010 03:58:56 AM
+-----
+BODY:
+<p>
+	M61 バルカン (M61 Vulcan) はアメリカ合衆国のゼネラル・エレクトリック(GE)社が開発した20mmガトリング砲で、航空機関砲や艦艇・地上部隊用の低高度防空用機関砲として用いられます。</p>
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+-----
+CF50_ACTIONDISTANCE:  
+CF50_OPERATIONMETHOD: 油圧駆動・電気雷管式撃発
+CF50_EFFECTIVERANGE: 約 810 m（航空機による空対空射撃）/ 約 1,490 m（CIWS等による地対空射撃）
+CF50_SIZE:  
+CF50_FLYINGRANGE:  
+CF50_DIAMETER:  
+CF50_OUTPUT:  
+CF50_BULLET: 20mm×102mm
+CF50_LENGTH: 1.88 m
+CF50_USE: 回転式多砲身機関砲
+CF50_ALTITUDE:  
+-----
+CF50_WEIGHT:
+298 kg
+-----
+CF50_CRUISINGSPEED:  
+CF50_CAPACITY:  
+CF50_DISCHARGESPEED: 毎分 4,000発　または 6,000発
+-----
+CF50_MAKER:
+ゼネラル・エレクトリック(GE)社
+-----
+CF50_REMARKS:  
+CF50_PRICE:  
+CF50_MATERIAL:  
+CF50_COLOR:  
+CF50_MAXIMUMSPEED:  
+CF50_WIDTH:  
+CF50_COUNTRY: アメリカ合衆国
+--------
+AUTHOR: dakiny
+TITLE: M1 エイブラムス（M1 Abrams）
+BASENAME: m1_abrams
+STATUS: Publish
+ALLOW COMMENTS: 0
+CONVERT BREAKS: richtext
+ALLOW PINGS: 0
+PRIMARY CATEGORY: 車両
+CATEGORY: 車両
+DATE: 02/23/2010 04:36:53 AM
+TAGS: アメリカ陸軍,イラク戦争,戦車,湾岸戦争
+-----
+BODY:
+<p>
+	M1 エイブラムスはM60パットンに変わるアメリカ軍の主力戦車です。湾岸戦争やイラク戦争などの実戦を経験し、世界最高水準の戦車であると世界的に評価されています。</p>
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+-----
+CF50_ACTIONDISTANCE: 行動距離 	498 km
+-----
+CF50_ENGINE:
+エンジン 	ガスタービンエンジン AGT1500
+-----
+CF50_OPERATIONMETHOD:  
+CF50_EFFECTIVERANGE:  
+CF50_SIZE:  
+CF50_FLYINGRANGE:  
+CF50_DIAMETER:  
+CF50_OUTPUT: 1500 hp
+CF50_BULLET:  
+CF50_LENGTH: 9.83 m
+CF50_USE: 主力戦車
+CF50_ALTITUDE:  
+-----
+CF50_WEIGHT:
+55.7 t M1
+57.0 t M1IP
+61.3 t M1A1
+62.1 t M1A2
+63.0 t M1A2 SEP
+-----
+CF50_CRUISINGSPEED:  
+CF50_CAPACITY: 4名
+-----
+CF50_MAKER:
+クライスラー（現ジェネラル・ダイナミクス）
+-----
+CF50_MAINROTOR:  
+CF50_REMARKS:  
+CF50_MATERIAL:  
+-----
+CF50_ARMAMENT:
+主砲：44口径120mm滑腔砲M256
+副武装 ：12.7mm重機関銃M2（対物・対空）
+M240 7.62 mm機関銃（主砲同軸）
+-----
+CF50_COLOR:  
+CF50_PRICE: 430万USドル
+CF50_MAXIMUMSPEED: 67 km/h（整地）、48 km/h（不整地）
+CF50_WIDTH: 3.65 m
+CF50_COUNTRY: アメリカ合衆国
+--------
+AUTHOR: dakiny
+TITLE: ハンヴィー（HMMWV, Humvee）
+BASENAME: hmmwv_humvee
+STATUS: Publish
+ALLOW COMMENTS: 0
+CONVERT BREAKS: richtext
+ALLOW PINGS: 0
+PRIMARY CATEGORY: 車両
+CATEGORY: 車両
+DATE: 02/23/2010 04:46:34 AM
+TAGS: アメリカ海軍,アメリカ空軍,アメリカ陸軍,ハマー,高機動多用途装輪車両
+-----
+BODY:
+<p>
+	ハンヴィーは1985年からM151（ケネディジープ）の後継車両としてアメリカ軍に配備が始まった軍用車両に対する総称です。ハンヴィーの民生用としは有名なハマーがあります。</p>
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+-----
+CF50_ACTIONDISTANCE: 443km
+CF50_HEIGHT: 1.87m
+-----
+CF50_ENGINE:
+6.2L水冷V型8気筒ディーゼルエンジン
+-----
+CF50_OPERATIONMETHOD:  
+CF50_EFFECTIVERANGE:  
+CF50_SIZE:  
+CF50_FLYINGRANGE:  
+CF50_DIAMETER:  
+CF50_OUTPUT: 190hp
+CF50_BULLET:  
+CF50_LENGTH: 4.84m
+CF50_USE: 高機動多用途装輪車両
+CF50_ALTITUDE:  
+-----
+CF50_WEIGHT:
+2.34t
+-----
+CF50_CRUISINGSPEED:  
+CF50_CAPACITY: 4～6名
+-----
+CF50_MAKER:
+AMゼネラル
+-----
+CF50_MAINROTOR:  
+CF50_REMARKS:  
+-----
+CF50_ARMAMENT:
+M2重機関銃＋下記いずれかの火器
+Mk.19 グレネードランチャー
+M240汎用機関銃
+M249MINIMI軽機関銃
+M134ミニガン
+-----
+CF50_COLOR:  
+CF50_MATERIAL:  
+CF50_PRICE:  
+CF50_MAXIMUMSPEED: 125km/h（路上）
+CF50_WIDTH: 2.16m
+CF50_COUNTRY: アメリカ合衆国
+--------
+AUTHOR: dakiny
+TITLE: International Space Station
+BASENAME: international_space_station
+STATUS: Draft
+ALLOW COMMENTS: 0
+CONVERT BREAKS: richtext
+ALLOW PINGS: 0
+DATE: 02/23/2010 06:59:09 PM
+-----
+BODY:
+
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+-----
+CF50_ACTIONDISTANCE:  
+CF50_OPERATIONMETHOD:  
+CF50_EFFECTIVERANGE:  
+CF50_SIZE:  
+CF50_FLYINGRANGE:  
+CF50_DIAMETER:  
+CF50_OUTPUT:  
+CF50_BULLET:  
+CF50_LENGTH:  
+CF50_USE:  
+CF50_ALTITUDE:  
+CF50_CRUISINGSPEED:  
+CF50_CAPACITY:  
+CF50_MAINROTOR:  
+CF50_REMARKS:  
+CF50_PRICE:  
+CF50_COLOR:  
+CF50_MATERIAL:  
+CF50_MAXIMUMSPEED:  
+CF50_WIDTH:  
+CF50_COUNTRY: アメリカ合衆国
+--------
+AUTHOR: dakiny
+TITLE: AH-64D アパッチ・ロングボウ（AH-64D Apache Longbow）
+BASENAME: ah-64d_apache_longbow
+STATUS: Publish
+ALLOW COMMENTS: 0
+CONVERT BREAKS: richtext
+ALLOW PINGS: 0
+PRIMARY CATEGORY: 航空機
+CATEGORY: 航空機
+DATE: 02/23/2010 04:55:27 AM
+TAGS: アメリカ陸軍,攻撃ヘリコプター
+-----
+BODY:
+<p>
+	AH-64D アパッチ・ロングボウは、世界最強の攻撃ヘリコプターといわれるAH-64A アパッチに、ロングボウ火器管制レーダーを搭載し、大幅な能力向上を図った改良型です。</p>
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+-----
+CF50_ACTIONDISTANCE:  
+CF50_HEIGHT: 4.95m(FCR頂部まで)
+-----
+CF50_ENGINE:
+GE製 T700-GE-701C ターボシャフト・エンジン×2
+-----
+CF50_OPERATIONMETHOD:  
+CF50_EFFECTIVERANGE:  
+CF50_SIZE:  
+CF50_FLYINGRANGE:  
+CF50_DIAMETER:  
+CF50_OUTPUT: 1409kW
+CF50_BULLET:  
+CF50_LENGTH: 17.76m
+CF50_USE: 対戦車・対地攻撃ヘリコプター
+CF50_ALTITUDE: 4,115m(地形効果内)/2,990m(地形効果外)
+-----
+CF50_WEIGHT:
+空虚重量:5,352kg
+最大離陸重量:10,107kg
+-----
+CF50_CRUISINGSPEED: 261.32km/h
+CF50_CAPACITY: 2名(前席:射撃手兼副操縦士/後席:操縦士)
+-----
+CF50_MAKER:
+マクドネル・ダグラス（現ボーイング）社
+-----
+CF50_MAINROTOR: 14.63m
+CF50_REMARKS:  
+-----
+CF50_ARMAMENT:
+M230A1 30mm機関砲×1
+-----
+CF50_COLOR:  
+CF50_MATERIAL:  
+CF50_PRICE: 216億円
+CF50_MAXIMUMSPEED: 197km/h
+CF50_WIDTH:  
+CF50_COUNTRY: アメリカ合衆国
+--------
+AUTHOR: dakiny
+TITLE: A-10 サンダーボルト II（A-10 Thunderbolt II）
+BASENAME: a-10_thunderbolt_2
+STATUS: Publish
+ALLOW COMMENTS: 0
+CONVERT BREAKS: richtext
+ALLOW PINGS: 0
+PRIMARY CATEGORY: 航空機
+CATEGORY: 航空機
+DATE: 02/23/2010 05:06:56 AM
+TAGS: アメリカ空軍,攻撃機
+-----
+BODY:
+<p>
+	A-10 サンダーボルトIIは、単座、双発、直線翼を持つアメリカ空軍初の近接航空支援(CAS)専用機で、対地上攻撃としては世界最強の攻撃機です。戦車、装甲車その他の地上目標の攻撃と若干の航空阻止により地上軍を支援する任務を担います。</p>
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+-----
+CF50_ACTIONDISTANCE:  
+CF50_HEIGHT: 4.42m
+-----
+CF50_ENGINE:
+GE製 TF34-GE-100×2 ターボファンエンジン
+-----
+CF50_OPERATIONMETHOD:  
+CF50_EFFECTIVERANGE:  
+CF50_SIZE:  
+CF50_FLYINGRANGE: 4,100km
+CF50_DIAMETER:  
+CF50_OUTPUT: 80kN
+CF50_BULLET:  
+CF50_LENGTH: 16.16m
+CF50_USE: 対地攻撃機、前線航空管制機
+CF50_ALTITUDE: 13,640m
+-----
+CF50_WEIGHT:
+22,950kgf
+-----
+CF50_CRUISINGSPEED: 560km/h
+CF50_CAPACITY: 1名
+-----
+CF50_MAKER:
+フェアチャイルド・リパブリック
+-----
+CF50_MAINROTOR:  
+CF50_REMARKS:  
+-----
+CF50_ARMAMENT:
+・固定武装：30mmガトリング砲×1 (1,174発)
+・爆弾：GBU-10/12、Mk82/83/84
+・ミサイル：AGM-65、AGM-114、AIM-9
+・ロケット弾
+-----
+CF50_COLOR:  
+CF50_MATERIAL:  
+CF50_PRICE: 1,180万USドル
+CF50_MAXIMUMSPEED:  
+CF50_WIDTH: 17.42m
+CF50_COUNTRY: アメリカ合衆国
+--------

@@ -1,0 +1,203 @@
+<div class="entry">
+    <h2><$mt:EntryTitle$></h2>
+    <div class="entry_inner">
+        <img src="<MTIfFileExist url="<$MTBlogURL$>images/<$MTEntryBasename$>.jpg"><$mt:BlogURL$>images/<$mt:EntryBasename$>.jpg<MTElse><mt:If tag="EntryDataImage"><mt:EntryDataImageAsset><$mt:AssetThumbnailURL$></mt:EntryDataImageAsset><mt:Else><$mt:Var name="website_url"$>blogimg/noimage.png</mt:If></MTIfFileExist>" alt="<$mt:EntryTitle$>" width="500" height="333" style="margin: 0pt auto 20px; text-align: center; display: block;" class="mt-image-center" />
+        <$mt:EntryBody filters="__default__"$>
+        <h3>商品データ</h3>
+        <table class="list" summary="商品データ">
+<mt:If tag="EntryDataUse" strip_linefeeds="1" trim="1">
+            <tr>
+                <th>用途</th>
+                <td><mt:EntryDataUse></td>
+            </tr>
+</mt:if>
+<mt:If tag="EntryDataCountry" strip_linefeeds="1" trim="1">
+            <tr>
+                <th>原産国</th>
+                <td><mt:EntryDataCountry></td>
+            </tr>
+</mt:if>
+<mt:If tag="EntryDataMaker" strip_linefeeds="1" trim="1">
+            <tr>
+                <th>メーカー</th>
+                <td><mt:EntryDataMaker></td>
+            </tr>
+</mt:if>
+<mt:If tag="EntryDataColor" strip_linefeeds="1" trim="1">
+            <tr>
+                <th>カラー</th>
+                <td><mt:EntryDataColor></td>
+            </tr>
+</mt:if>
+<mt:If tag="EntryDataSize" strip_linefeeds="1" trim="1">
+            <tr>
+                <th>サイズ</th>
+                <td><mt:EntryDataSize></td>
+            </tr>
+</mt:if>
+<mt:If tag="EntryDataMaterial" strip_linefeeds="1" trim="1">
+            <tr>
+                <th>素材</th>
+                <td><mt:EntryDataMaterial></td>
+            </tr>
+</mt:if>
+<mt:If tag="EntryDataContents" strip_linefeeds="1" trim="1">
+            <tr>
+                <th>内容</th>
+                <td><mt:EntryDataContents></td>
+            </tr>
+</mt:if>
+<mt:If tag="EntryDataLength" strip_linefeeds="1" trim="1">
+            <tr>
+                <th>全長</th>
+                <td><mt:EntryDataLength></td>
+            </tr>
+</mt:if>
+<mt:If tag="EntryDataWidth" strip_linefeeds="1" trim="1">
+            <tr>
+                <th>全幅</th>
+                <td><mt:EntryDataWidth></td>
+            </tr>
+</mt:if>
+<mt:If tag="EntryDataDiameter" strip_linefeeds="1" trim="1">
+            <tr>
+                <th>直径</th>
+                <td><mt:EntryDataDiameter></td>
+            </tr>
+</mt:if>
+<mt:If tag="EntryDataMainrotor" strip_linefeeds="1" trim="1">
+            <tr>
+                <th>メインローターの直径</th>
+                <td><mt:EntryDataMainrotor></td>
+            </tr>
+</mt:if>
+<mt:If tag="EntryDataHeight" strip_linefeeds="1" trim="1">
+            <tr>
+                <th>全高</th>
+                <td><mt:EntryDataHeight></td>
+            </tr>
+</mt:if>
+<mt:If tag="EntryDataWeight" strip_linefeeds="1" trim="1">
+            <tr>
+                <th>重量</th>
+                <td><mt:EntryDataWeight></td>
+            </tr>
+</mt:if>
+<mt:If tag="EntryDataNumber" strip_linefeeds="1" trim="1">
+            <tr>
+                <th>個数</th>
+                <td><mt:EntryDataNumber></td>
+            </tr>
+</mt:if>
+<mt:If tag="EntryDataBullet" strip_linefeeds="1" trim="1">
+            <tr>
+                <th>使用弾薬</th>
+                <td><mt:EntryDataBullet></td>
+            </tr>
+</mt:if>
+<mt:If tag="EntryDataNumberofbullets" strip_linefeeds="1" trim="1">
+            <tr>
+                <th>装弾数</th>
+                <td><mt:EntryDataNumberofbullets></td>
+            </tr>
+</mt:if>
+<mt:If tag="EntryDataOperationmethod" strip_linefeeds="1" trim="1">
+            <tr>
+                <th>作動方式</th>
+                <td><mt:EntryDataOperationmethod></td>
+            </tr>
+</mt:if>
+<mt:If tag="EntryDataDischargespeed" strip_linefeeds="1" trim="1">
+            <tr>
+                <th>発射速度</th>
+                <td><mt:EntryDataDischargespeed></td>
+            </tr>
+</mt:if>
+<mt:If tag="EntryDataEffectiverange" strip_linefeeds="1" trim="1">
+            <tr>
+                <th>有効射程距離</th>
+                <td><mt:EntryDataEffectiverange></td>
+            </tr>
+</mt:if>
+<mt:If tag="EntryDataCapacity" strip_linefeeds="1" trim="1">
+            <tr>
+                <th>乗員数</th>
+                <td><mt:EntryDataCapacity></td>
+            </tr>
+</mt:if>
+<mt:If tag="EntryDataArmament" strip_linefeeds="1" trim="1">
+            <tr>
+                <th>武装</th>
+                <td><mt:EntryDataArmament></td>
+            </tr>
+</mt:if>
+<mt:If tag="EntryDataMaximumspeed" strip_linefeeds="1" trim="1">
+            <tr>
+                <th>最高速度</th>
+                <td><mt:EntryDataMaximumspeed></td>
+            </tr>
+</mt:if>
+<mt:If tag="EntryDataCruisingspeed" strip_linefeeds="1" trim="1">
+            <tr>
+                <th>巡航速度</th>
+                <td><mt:EntryDataCruisingspeed></td>
+            </tr>
+</mt:if>
+<mt:If tag="EntryDataAltitude" strip_linefeeds="1" trim="1">
+            <tr>
+                <th>高度</th>
+                <td><mt:EntryDataAltitude></td>
+            </tr>
+</mt:if>
+<mt:If tag="EntryDataEngine" strip_linefeeds="1" trim="1">
+            <tr>
+                <th>エンジン</th>
+                <td><mt:EntryDataEngine></td>
+            </tr>
+</mt:if>
+<mt:If tag="EntryDataOutput" strip_linefeeds="1" trim="1">
+            <tr>
+                <th>出力</th>
+                <td><mt:EntryDataOutput></td>
+            </tr>
+</mt:if>
+<mt:If tag="EntryDataDrive" strip_linefeeds="1" trim="1">
+            <tr>
+                <th>駆動</th>
+                <td><mt:EntryDataDrive></td>
+            </tr>
+</mt:if>
+<mt:If tag="EntryDataActiondistance" strip_linefeeds="1" trim="1">
+            <tr>
+                <th>行動距離</th>
+                <td><mt:EntryDataActiondistance></td>
+            </tr>
+</mt:if>
+<mt:If tag="EntryDataFlyingrange" strip_linefeeds="1" trim="1">
+            <tr>
+                <th>航続距離</th>
+                <td><mt:EntryDataFlyingrange></td>
+            </tr>
+</mt:if>
+<mt:If tag="EntryDataPrice" strip_linefeeds="1" trim="1">
+            <tr>
+                <th>価格</th>
+                <td><mt:EntryDataPrice></td>
+            </tr>
+</mt:if>
+<mt:If tag="EntryDataRemarks" strip_linefeeds="1" trim="1">
+            <tr>
+                <th>備考</th>
+                <td><mt:EntryDataRemarks></td>
+            </tr>
+</mt:if>
+<mt:If tag="EntryMore" strip_linefeeds="1" trim="1">
+            <tr>
+                <th>その他</th>
+                <td><$mt:EntryMore filters="__default__"$></td>
+            </tr>
+</mt:if>
+        </table>
+        <div class="inq_btn"><a href="<$mt:Var name="website_url"$>inquiry/">詳しくはお問い合せください</a></div>
+    </div><!-- / entry_inner -->
+</div><!-- / entry -->

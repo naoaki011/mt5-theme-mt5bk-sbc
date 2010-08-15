@@ -1,0 +1,57 @@
+<mt:SetVars>
+    website_id=<$mt:WebsiteID$>
+    page_title=お問い合せ
+    page_folder=お問い合せ
+    title=<$mt:WebsiteName encode_html="1"$> : メールフォーム : メールの確認
+    mail_preview_template=1
+</mt:SetVars>
+<mt:SetVarBlock name="bred_crumb"$>
+    <li><a href="<$mt:WebsiteURL$>">トップ</a></li>
+    <li><$mt:Var name="page_title"$></li>
+</mt:SetVarBlock>
+<$mt:Include module="変数設定"$>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ja" xml:lang="ja" xmlns="http://www.w3.org/1999/xhtml" id="sixapart-standard">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=<$mt:PublishCharset$>" />
+    <meta name="generator" content="<$mt:ProductName version="1"$>" />
+<$mt:Include module="ヘッダー"$>
+    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="<$mt:Link template="feed_recent"$>" />
+    <title><$mt:Var name="title"$></title>
+</head>
+<body>
+    <$mt:Include module="Bodyヘッダー"$>
+    <div id="content">
+        <div class="content_inner">
+            <ul class="path">
+                <$mt:GetVar name="bred_crumb"$>
+            </ul>
+            <div id="main">
+                <div class="inner">
+
+<div class="entry">
+    <h2>メールの確認</h2>
+    <div class="entry_inner">
+        <p>以下の内容でメールを送信します。<br />内容を修正する場合は、この後にあるメールフォームで修正してください。</p>
+        <p>会社名：<$MTMailPreviewExtParam name="mail_corporait"$></p>
+        <p>お名前：<$MTMailPreviewAuthor$></p>
+        <p>E-mail：<$MTMailPreviewEMail$></p>
+        <p>URL：<$MTMailPreviewExtParam name="mail_url"$></p>
+        <p>ご住所：<$MTMailPreviewExtParam name="mail_address"$></p>
+        <p>電話番号：<$MTMailPreviewExtParam name="mail_phonenumber"$></p>
+        <p>お問い合わせ内容：<br /><$MTMailPreviewBody convert_breaks="1"$></p>
+<$MTIncludeMailFormCommon$>
+    </div><!-- / entry_inner -->
+</div><!-- / entry -->
+
+                </div><!-- / inner -->
+            </div><!-- / main -->
+            <$mt:Include module="サイドバー"$>
+            <div class="to_head">
+                <a href="#header">このページの先頭へ</a>
+            </div>
+        </div><!-- / inner -->
+    </div><!-- / content -->
+    <$mt:Include module="Bodyフッター"$>
+</body>
+</html>

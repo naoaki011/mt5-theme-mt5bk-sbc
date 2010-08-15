@@ -1,0 +1,24 @@
+<!--
+  このテーマは「Creative Commons - 表示-継承 2.1 日本（http://creativecommons.org/licenses/by-sa/2.1/jp/）」
+  ライセンスでで配布されており、以下の人々に著作権および権利権があります。
+  蒲生 トシヒロ (GAMO, Toshihiro) http://www.dakiny.com/,
+  小野崎 直昭 (ONOZAKI, Naoaki) http://www.zelazny.mydns.jp/,
+  柳 泰久 (Yasuhisa Yanagi) http://atstyle.biz/,
+  難波田 実香 (Mika Naniwada) http://kiasma.jp/,
+  ※注意：このコメントを削除する行為は上記ライセンスの定めるところにより禁止されています。
+-->
+    <meta name="robots" content="INDEX,FOLLOW" />
+    <meta name="description" content="<mt:If name="page_archive"><$mt:PageExcerpt remove_html="1" strip_linefeeds="1" trim="1"$><mt:ElseIf name="entry_archive"><$mt:EntryBody words="80" strip_linefeeds="1" trim="1"$><mt:ElseIf name="category_archive"><$mt:CategoryDescription strip_linefeeds="1" trim="1"$><mt:ElseIf name="datebased_only_archive"><$mt:ArchiveTitle$>のアーカイブです。<mt:ElseIf name="main_index"><mt:If tag="BlogDescription"><$mt:BlogDescription remove_html="1" strip_linefeeds="1" trim="1" _default="このページには概要はありません"$><mt:Else><mt:BlogParentWebsite><$mt:WebsiteDescription remove_html="1" strip_linefeeds="1" trim="1" _default="このページには概要はありません"$></mt:BlogParentWebsite></mt:If></mt:If>" />
+<mt:SetVar name="metakeywords" value="軍需品, 宇宙航空" />
+    <meta name="keywords" content="<mt:If name="page_archive"><$mt:Var name="metakeywords"$><mt:PageIfTagged> ,</mt:PageIfTagged><mt:PageTags glue=" ,"><$mt:TagName></mt:PageTags><mt:If tag="PageKeywords"> ,<$mt:PageKeywords$></mt:If><mt:ElseIf name="entry_archive"><$mt:Var name="metakeywords"$><mt:If tag="EntryCategories"><mt:EntryCategories> ,<$mt:CategoryLabel></mt:EntryCategories></mt:If><mt:If tag="EntryTags"><mt:EntryTags> ,<$mt:TagName></mt:EntryTags></mt:If><mt:If tag="EntryKeywords"> ,<$mt:EntryKeywords$></mt:If><mt:ElseIf name="category_archive"><$mt:Var name="metakeywords"$><mt:SubCategories include_current="1"> ,<$mt:CategoryLabel$></mt:SubCategories><mt:Else><$mt:Var name="metakeywords"$></mt:If>" />
+    <meta name="author" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=8" />
+    <meta http-equiv="content-style-type" content="text/css" />
+    <meta http-equiv="content-script-type" content="text/javascript" />
+    <link rel="stylesheet" href="<$mt:var name="website_url"$>css/styles.css" type="text/css" />
+    <link rev="made" href="mailto:" />
+    <link rel="start" href="<$mt:var name="website_url"$>" title="ホーム" />
+<mt:if name="heightline_on">
+    <script type="text/javascript" src="<$mt:var name="website_url"$>js/heightLine.js"></script>
+</mt:if>
+

@@ -1,0 +1,97 @@
+<mt:SetVars>
+    title=<$mt:WebsiteName encode_html="1"$>
+    website_id=<$mt:WebsiteID$>
+</mt:SetVars>
+<$mt:Include module="変数設定"$>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ja" xml:lang="ja" xmlns="http://www.w3.org/1999/xhtml" id="sixapart-standard">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=<$mt:PublishCharset$>" />
+    <meta name="generator" content="<$mt:ProductName version="1"$>" />
+<$mt:Include module="ヘッダー"$>
+    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="<$mt:Link template="feed_recent"$>" />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="<$MTLink template="rsd"$>" />
+    <title><$mt:Var name="title"$></title>
+</head>
+<body>
+    <$mt:Include module="Bodyヘッダー"$>
+    <div id="content">
+        <div class="content_inner">
+            <div class="image">
+                <img src="<$mt:var name="website_url"$>blogimg/image_01.jpg" alt="" width="960" height="260" />
+            </div><!-- / image -->
+            <div id="main">
+                <div class="inner">
+
+<div class="area">
+    <div class="main_top">
+<mt:Pages tag="@greeting" limit="1">
+        <h2><$mt:PageTitle remove_html="1"$></h2>
+        <div class="main_top_inner">
+            <$mt:EntryBody filters="__default__"$>
+            <$mt:EntryMore filters="__default__"$>
+        </div><!-- / main_top_inner -->
+</mt:Pages>
+    </div><!-- / main_top -->
+    <div class="main_top">
+<mt:Blogs include_blogs="$info_blogid">
+<mt:If tag="BlogEntryCount">
+        <h2><a href="<$MTBlogURL$>"><$MTBlogName$></a></h2>
+<mt:Else>
+        <h2><$MTBlogName$></h2>
+</mt:If>
+        <div class="main_top_inner">
+<mt:Entries lastn="6">
+<mt:If name="__first__">
+            <dl>
+</mt:If>
+                <dt><$mt:EntryDate format="%Y/%m/%d/"$></dt>
+                <dd><a href="<$mt:EntryPermalink$>" title="<$mt:entrytitle$>"><$mt:EntryTitle$></a></dd>
+<mt:If name="__last__">
+            </dl>
+            <div class="to_summary"><a href="<$MTBlogURL$>"><$MTBlogName$>一覧</a></div>
+</mt:If>
+<mt:Else>
+            <p>まだ、<$MTBlogName$>は投稿されていません。</p>
+</mt:Entries>
+        </div><!-- / main_top_inner -->
+</mt:Blogs>
+   </div><!-- / main_top -->
+</div><!-- / area -->
+
+<div class="area">
+<mt:Blogs include_blogs="$product_blogid">
+<mt:Entries lastn="4">
+<mt:If name="__first__">
+    <h2 class="product_h"><a href="<$MTBlogURL$>"><$MTBlogName$></a></h2>
+</mt:If>
+        <div class="product">
+           <dl>
+                <dt><a href="<$MTEntryPermalink$>"><img src="<MTIfFileExist url="<$MTBlogURL$>thumbnail/<$MTEntryBasename$>.jpg"><$MTBlogURL$>thumbnail/<$MTEntryBasename$>.jpg<MTElse><mt:IfNonEmpty tag="mt:EntryDataThumbnail"><$MTBlogURL$>thumbnail/<$MTEntryBasename$>.jpg<MTElse><$mt:GetVar name="website_url"$>blogimg/noimage_s.png</mt:IfNonEmpty></MTIfFileExist>" alt="<$mt:EntryTitle$>" width="114" height="76" /></a></dt>
+                <dd class="product_title"><a href="<$MTEntryPermalink$>" title="<$MTEntryTitle$>"><$MTEntryTitle$></a></dd>
+<mt:If tag="EntryBody" strip_linfeed="1" trim="1">
+                <dd><$MTEntryExcerpt$></dd>
+</mt:If>
+               </dl>
+        </div>
+<mt:If name="__last__">
+        <div class="to_summary_p"><a href="<$MTBlogURL$>"><$MTBlogName$>一覧</a></div>
+</mt:If>
+<mt:Else>
+    <h2 class="product_h"><$MTBlogName$></h2>
+    <p>まだ、<$MTBlogName$>は作成されていません。</p>
+</mt:Entries>
+</mt:Blogs>
+</div><!-- / area -->
+
+                </div><!-- / inner -->
+            </div><!-- / main -->
+            <$mt:Include module="サイドバー"$>
+            <div class="to_head">
+                <a href="#header">このページの先頭へ</a>
+            </div>
+        </div><!-- / inner -->
+    </div><!-- / content -->
+    <$mt:Include module="Bodyフッター"$>
+</body>
+</html>

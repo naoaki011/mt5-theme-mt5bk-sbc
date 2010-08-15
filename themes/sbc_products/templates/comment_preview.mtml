@@ -1,0 +1,101 @@
+<mt:SetVars>
+    website_id=<mt:BlogParentWebsite><$mt:WebsiteID$></mt:BlogParentWebsite>
+    blog_name=商品案内
+    title=コメントのプレビュー - <$mt:BlogName encode_html="1"$> - <mt:BlogParentWebsite><$mt:WebsiteName encode_html="1"$></mt:BlogParentWebsite>
+</mt:SetVars>
+<$mt:Include module="変数設定" blog_id="$website_id"$>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ja" xml:lang="ja" xmlns="http://www.w3.org/1999/xhtml" id="sixapart-standard">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=<$mt:PublishCharset$>" />
+    <meta name="generator" content="<$mt:ProductName version="1"$>" />
+<$mt:Include module="ヘッダー" blog_id="$website_id"$>
+    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="<mt:BlogParentWebsite><$mt:Link template="feed_recent"$></mt:BlogParentWebsite>" />
+    <script type="text/javascript" src="<$mt:Link template="javascript"$>"></script>
+    <title><$mt:Var name="title"$></title>
+</head>
+<body>
+    <$mt:Include module="Bodyヘッダー" blog_id="$website_id"$>
+    <div id="content">
+        <div class="content_inner">
+            <ul class="path">
+                <li><a href="<$mt:Var name="website_url"$>" title="トップ">トップ</a></li>
+                <li><a href="<$MTBlogURL$>"><$mt:Var name="blog_name"$></a></li>
+                <li><a href="<MTEntryLink>"><$MTEntryTitle$></a></li>
+                <li>コメントのプレビュー</li>
+            </ul>
+            <div id="main">
+                <div class="inner">
+
+                    <div class="entry">
+                        <h2>コメントのプレビュー</h2>
+                        <div class="entry_inner">
+
+<mt:Ignore><!-- Comment Preview --></mt:Ignore>
+                            <$mt:Include module="コメント詳細" blog_id="$website_id"$>
+<mt:Ignore><!-- Comment Form --></mt:Ignore>
+                            <div class="comments-open" id="comments-open">
+                                <h2 class="comments-open-header">コメントする</h2>
+                                <div class="comments-open-content">
+                                    <div id="comment-greeting"></div>
+                                    <form method="post" action="<$mt:CGIPath$><$mt:CommentScript$>" name="comments_form" id="comments-form" onsubmit="return mtCommentOnSubmit(this)">
+                                        <input type="hidden" name="static" value="1" />
+                                        <input type="hidden" name="armor" value="1" />
+                                        <input type="hidden" name="preview" value="" />
+                                        <input type="hidden" name="entry_id" value="<$mt:EntryID$>" />
+                                        <input type="hidden" name="__lang" value="<$mt:BlogLanguage$>" />
+<mt:IfCommentParent>
+                                            <input type="hidden" name="parent_id" value="<$mt:CommentParentID escape="html"$>" id="comment-parent-id">
+</mt:IfCommentParent>
+                                        <div id="comments-open-data">
+                                            <div id="comment-form-name">
+                                                <label for="comment-author">名前</label>
+                                                <input id="comment-author" name="author" size="30" value="<$mt:CommentAuthor encode_html="1"$>" onfocus="mtShowCaptcha()" />
+                                            </div>
+                                            <div id="comment-form-email">
+                                                <label for="comment-email">電子メール</label>
+                                                <input id="comment-email" name="email" size="30" value="<$mt:CommentEmail encode_html="1"$>" onfocus="mtShowCaptcha()" />
+                                            </div>
+                                            <div id="comment-form-url">
+                                                <label for="comment-url">URL</label>
+                                                <input id="comment-url" name="url" size="30" value="<$mt:CommentURL encode_html="1"$>" onfocus="mtShowCaptcha()" />
+                                            </div>
+                                        </div>
+<mt:IfCommentParent>
+                                        <div id="comment-form-reply">
+                                            <input type="checkbox" id="comment-reply" name="comment_reply" value="<$mt:CommentParentID escape="html"$>" checked="checked" onclick="mtSetCommentParentID()" />
+                                            <label for="comment-reply" id="comment-reply-label"><mt:CommentParent><$mt:CommentAuthor$></mt:CommentParent>からのコメントに返信</label>
+                                        </div>
+</mt:IfCommentParent>
+                                        <div id="comments-open-text">
+                                            <label for="comment-text">コメント <mt:IfAllowCommentHTML>(スタイル用のHTMLタグを使えます)</mt:IfAllowCommentHTML></label>
+                                            <textarea id="comment-text" name="text" rows="15" cols="50" onfocus="mtShowCaptcha()"><$mt:CommentBody autolink="0" sanitize="0" convert_breaks="0" encode_html="1"$></textarea>
+                                        </div>
+                                        <div id="comments-open-captcha"></div>
+                                        <div id="comments-open-footer">
+                                            <input type="submit" accesskey="v" name="preview_button" id="comment-preview" value="プレビュー" onclick="this.form.preview.value='1';" />
+                                            <input type="submit" accesskey="s" name="post" id="comment-submit" value="投稿" />
+                                            <input type="button" name="cancel" id="comment-cancel" value="キャンセル" onclick="window.location='<$mt:EntryPermalink$>'" />
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div><!-- / entry_inner -->
+                    </div><!-- / entry -->
+
+                </div><!-- / inner -->
+            </div><!-- / main -->
+            <div id="sub">
+                <div class="inner">
+<$mt:WidgetSet name="サイドバー"$>
+                </div><!-- / inner -->
+            </div><!-- / sub -->
+            <div class="to_head">
+                <a href="#header">このページの先頭へ</a>
+            </div>
+        </div><!-- / inner -->
+    </div><!-- / content -->
+    <$mt:Include module="Bodyフッター" blog_id="$website_id"$>
+</body>
+</html>

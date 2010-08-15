@@ -1,0 +1,61 @@
+<mt:SetVars>
+    website_id=<mt:BlogParentWebsite><$mt:WebsiteID$></mt:BlogParentWebsite>
+    blog_name=商品案内
+    title=<$mt:BlogName encode_html="1"$> - <mt:BlogParentWebsite><$mt:WebsiteName encode_html="1"$></mt:BlogParentWebsite>
+    heightline_on=1
+</mt:SetVars>
+<$mt:Include module="変数設定" blog_id="$website_id"$>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ja" xml:lang="ja" xmlns="http://www.w3.org/1999/xhtml" id="sixapart-standard">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=<$mt:PublishCharset$>" />
+    <meta name="generator" content="<$mt:ProductName version="1"$>" />
+<$mt:Include module="ヘッダー" blog_id="$website_id"$>
+    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="<mt:BlogParentWebsite><$mt:Link template="feed_recent"$></mt:BlogParentWebsite>" />
+    <title><$mt:Var name="title"$></title>
+</head>
+<body>
+    <$mt:Include module="Bodyヘッダー" blog_id="$website_id"$>
+    <div id="content">
+        <div class="content_inner">
+            <ul class="path">
+                <li><a href="<$mt:Var name="website_url"$>" title="トップ">トップ</a></li>
+                <li><$mt:Var name="blog_name" encode_html="1"$></li>
+            </ul>
+            <div id="main">
+                <div class="inner">
+                    <h2 class="product_h"><$mt:Var name="blog_name" encode_html="1"$></h2>
+
+<mt:Entries lastn="10">
+<div class="product_list heightLine">
+    <dl>
+        <dt>
+            <a href="<$mt:EntryPermalink$>">
+                <img src="<MTIfFileExist url="<$MTBlogURL$>thumbnail/<$MTEntryBasename$>.jpg"><$mt:BlogURL$>thumbnail/<$mt:EntryBasename$>.jpg<MTElse><mt:If tag="EntryDataThumbnail"><mt:EntryDataThumbnailAsset><$mt:AssetThumbnailURL$></mt:EntryDataThumbnailAsset><mt:Else><$mt:Var name="website_url"$>blogimg/noimage_s.png</mt:If></MTIfFileExist>" alt="<$mt:EntryTitle$>" width="114" height="76" />
+            </a>
+        </dt>
+        <dd class="product_title"><a href="<$mt:EntryPermalink$>" title="<$mt:EntryTitle$>"><$mt:EntryTitle$></a></dd>
+<mt:If tag="EntryBody" strip_linefeeds="1" trim="1">
+        <dd><$mt:EntryExcerpt$></dd>
+</mt:If>
+    </dl>
+</div>
+</mt:Entries>
+
+                </div><!-- / inner -->
+            </div><!-- / main -->
+            <div id="sub">
+                <div class="inner">
+<$mt:WidgetSet name="サイドバー"$>
+                </div><!-- / inner -->
+            </div><!-- / sub -->
+            <div class="to_head">
+                <a href="#header">このページの先頭へ</a>
+            </div>
+        </div><!-- / inner -->
+    </div><!-- / content -->
+    <$mt:Include module="Bodyフッター" blog_id="$website_id"$>
+</body>
+</html>
+
+

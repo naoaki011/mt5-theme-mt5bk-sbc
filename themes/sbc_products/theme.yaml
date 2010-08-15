@@ -1,0 +1,444 @@
+#
+# SBC Theme for ProductsBlog.
+#
+# Design by Mika Naniwada & GAMO, Toshihirro.
+# IA by GAMO, Toshihirro.
+# MarkUp by Yasuhisa Yanagi
+# Create Theme by Naoaki Onozaki.
+#
+# License Under Creative Commons Attribution-Share Alike 2.1 Japan
+#
+id: sbc_products
+label: SBC商品案内のテーマ
+name: SBC商品案内のテーマ
+version: 1.0
+author_link: http://www.sbcr.jp/
+author_name: ソフトバンククリエイティブ
+class: blog
+description: |
+  SBC商事株式会社商品案内ブログのためのテーマです。
+  このテーマはソフトバンククリエイティブより出版された、書籍「Movable Type 5 実践テクニック」のサンプルとして作成されました。
+  ライセンス『Creative Commons - 表示-継承 2.1 日本』
+required_components: 
+  commercial: 1.50
+#  IfFileExist: 2.00
+#  SortCatFld: 1.10
+thumbnail_file: sbc-products.png
+thumbnail_file_medium: sbc-products-medium.png
+thumbnail_file_small: sbc-products-small.png
+elements: 
+  blog_static_files: 
+    component: core
+    importer: blog_static_files
+    data: 
+      - images
+      - thumbnail
+  custom_fields: 
+    component: commercial
+    importer: custom_fields
+    data: 
+      actiondistance: 
+        default: ''
+        description: 行動距離を書いてください。
+        name: 行動距離
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: EntryDataActiondistance
+        type: text
+      altitude: 
+        default: ''
+        description: 飛行高度を記入してください。
+        name: 高度限界
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: EntryDataAltitude
+        type: text
+      armament: 
+        default: ''
+        description: 武装を書いてください。
+        name: 武装
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: EntryDataArmament
+        type: textarea
+      bullet: 
+        default: ''
+        description: 仕様弾薬サイズを書いてください。
+        name: 使用弾薬
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: EntryDataBullet
+        type: text
+      capacity: 
+        default: ''
+        description: 乗員数をを書いてください。
+        name: 乗員数
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: EntryDataCapacity
+        type: text
+      color: 
+        default: ''
+        description: 衣類の色を書いてください。
+        name: カラー
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: EntryDataColor
+        type: text
+      contents: 
+        default: ''
+        description: 内容を書いてください。
+        name: 内容
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: EntryDataContents
+        type: textarea
+      country: 
+        default: アメリカ合衆国
+        description: 生産国を書いてください。
+        name: 生産国
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: EntryDataCountry
+        type: text
+      cruisingspeed: 
+        default: ''
+        description: 巡航速度を書いてください。
+        name: 巡航速度
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: EntryDataCruisingspeed
+        type: text
+      delivery: 
+        default: ''
+        description: 導入国を書いてください。
+        name: 導入国家
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: EntryDataDelivery
+        type: textarea
+      diameter: 
+        default: ''
+        description: ミサイル、ロケットの場合は、全幅の代わりに直径を書いてください。
+        name: 直径
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: EntryDataDiameter
+        type: text
+      dischargespeed: 
+        default: ''
+        description: 発射速度を書いてください。
+        name: 発射速度
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: EntryDataDischargespeed
+        type: text
+      drive: 
+        default: ''
+        description: 駆動方式を書いてください。
+        name: 駆動方式
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: EntryDataDrive
+        type: text
+      effectiverange: 
+        default: ''
+        description: 有効射程距離を書いてください。
+        name: 有効射程距離
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: EntryDataEffectiverange
+        type: text
+      engine: 
+        default: ''
+        description: エンジンを書いてください。
+        name: エンジン
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: EntryDataEngine
+        type: textarea
+      flyingrange: 
+        default: ''
+        description: 航続距離を記入してください。
+        name: 航続距離
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: EntryDataFlyingrange
+        type: text
+      height: 
+        default: ''
+        description: 全高を書いてください。
+        name: 全高
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: EntryDataHeight
+        type: text
+      image: 
+        default: ''
+        description: 幅500px・高さ333pxのメイン画像をアップロードしてください。
+        name: 画像
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: EntryDataImage
+        type: image
+      length: 
+        default: ''
+        description: 全長を書いてください。
+        name: 全長
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: EntryDataLength
+        type: text
+      mainrotor: 
+        default: ''
+        description: "メインローターの直径を記入してください。\r\n※ヘリコプターの場合に限定されますので、固定翼機の場合記入の必要はありません。\r\n※例：14.63m"
+        name: メインローターの直径
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: EntryDataMainrotor
+        type: text
+      maker: 
+        default: ''
+        description: 製造企業を記入してください。複数ある場合は改行して記入してください。
+        name: メーカー
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: EntryDataMaker
+        type: textarea
+      material: 
+        default: ''
+        description: 生地素材を書いてください。
+        name: 素材
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: EntryDataMaterial
+        type: text
+      maximumspeed: 
+        default: ''
+        description: 最高速度を書いてください。
+        name: 最高速度
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: EntryDataMaximumspeed
+        type: text
+      number: 
+        default: ''
+        description: 個数を記入してください。
+        name: 個数
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: EntryDataNumber
+        type: text
+      numberofbullets: 
+        default: ''
+        description: 装弾数を記入してください。
+        name: 装弾数
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: EntryDataNumberofbullets
+        type: text
+      operationmethod: 
+        default: ''
+        description: 作動方式を書いてください。
+        name: 作動方式
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: EntryDataOperationmethod
+        type: text
+      output: 
+        default: ''
+        description: 推力を記入してください。
+        name: 推力
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: EntryDataOutput
+        type: text
+      price: 
+        default: ''
+        description: 価格を書いてください。初期値の場合は「応相談」となります。
+        name: 価格
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: EntryDataPrice
+        type: text
+      remarks: 
+        default: ''
+        description: 備考があれば記入してください。
+        name: 備考
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: EntryDataRemarks
+        type: text
+      size: 
+        default: ''
+        description: 服のサイズを書いてください。
+        name: サイズ
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: EntryDataSize
+        type: text
+      thumbnail: 
+        default: ''
+        description: 幅114px・高さ76pxのサムネール画像をアップロードしてください。
+        name: サムネール
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: EntryDataThumbnail
+        type: image
+      use: 
+        default: ''
+        description: 用途を書いてください。
+        name: 用途
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: EntryDataUse
+        type: text
+      weight: 
+        default: ''
+        description: 重量を入れてください。乾燥重量と装備重量がある場合は改行して入れてください。
+        name: 重量
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: EntryDataWeight
+        type: textarea
+      width: 
+        default: ''
+        description: 全幅を書いてください。※直径を選んだ場合は記載の必要はありません。
+        name: 全幅
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: EntryDataWidth
+        type: text
+  default_categories: 
+    component: ~
+    importer: default_categories
+    data: 
+      firearms: 
+        description: 拳銃、小銃、サブマシンガン、ショットガン、アサルトライフルといった小火器から、榴弾砲、カノン砲、臼砲、地対地ミサイル、地対空ミサイルに至る重火器までのカテゴリです。
+        label: 火器
+      ration: 
+        description: 戦闘食のカテゴリです。
+        label: 食料品
+      spaceship: 
+        description: 人工衛星や無人探査機、からスペースシャトル、宇宙ステーションに至るまでの宇宙機のカテゴリーです。
+        label: 宇宙機
+      uniform: 
+        description: 通常時の制服や戦闘服だけでなく、スポーツウェア・式典服などまで軍隊で扱う全ての衣類のカテゴリです。
+        label: 衣類
+      vehicle: 
+        description: 高機動多用途装輪車両から、装甲車、戦車に至るまでの軍用車両のカテゴリです。
+        label: 車両
+      warplane: 
+        description: 戦闘機、攻撃機、爆撃機、偵察機、輸送機等の軍用機のカテゴリです。
+        label: 航空機
+  default_folders: 
+    component: core
+    importer: default_folders
+    data: 
+      images: 
+        label: 画像
+      thumbnail: 
+        label: サムネイル
+  template_set: 
+    component: core
+    importer: template_set
+    data: 
+      base_path: templates
+      label: exported_template set
+      templates: 
+        archive: 
+          entry_listing: 
+            label: ブログ記事リスト
+            mappings: 
+              category: 
+                archive_type: Category
+                file_template: "%c/%i"
+                preferred: 1
+        index: 
+          javascript: 
+            label: Javascript
+            outfile: js/mt.js
+            rebuild_me: 1
+          main_index: 
+            label: メインページ
+            outfile: index.html
+            rebuild_me: 1
+          rsd: 
+            label: RSD
+            outfile: rsd.xml
+            rebuild_me: 1
+        individual: 
+          entry: 
+            label: ブログ記事
+            mappings: 
+              individual: 
+                archive_type: Individual
+                file_template: "%c/%b/%i"
+                preferred: 1
+        module: 
+          entry_detail: 
+            label: ブログ記事の詳細・商品案内
+          entry_summary: 
+            label: ブログ記事の概要・商品案内
+        system: 
+          comment_listing: 
+            label: コメント一覧
+          comment_preview: 
+            label: コメントプレビュー
+          comment_response: 
+            label: コメント完了
+          dynamic_error: 
+            label: ダイナミックパブリッシングエラー
+          popup_image: 
+            label: ポップアップ画像
+          search_results: 
+            label: 検索結果
+        widget: 
+          category_archive_list: 
+            label: アーカイブリスト
+          syndication: 
+            label: 購読
+          tag_cloud: 
+            label: タグクラウド
+        widgetset: 
+          archivelist_widgetset: 
+            label: サイドバー
+            order: 1000
+            widgets: 
+              - アーカイブリスト
+              - タグクラウド
+              - 購読

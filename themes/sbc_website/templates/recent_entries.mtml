@@ -1,0 +1,19 @@
+<mt:Var name="number_list" _default="6" setvar="number" />
+<mt:BlogID setvar="blog_id" />
+<mt:Blogs include_blogs="$blog_id" ignore_archive_context="1">
+	<mt:Entries lastn="$number">
+		<mt:if name="__first__">
+<dl class="page_list">
+    <dt>最近の記事</dt>
+    <dd>
+        <ul>
+		</mt:if>
+            <li><a href="<$mt:EntryPermalink archive_type="Individual"$>" title="<$mt:EntryTitle$>"><$mt:EntryTitle$></a> (<$mt:EntryCreatedDate format="%Y/%m/%d"$>)</li>
+		<mt:if name="__last__">
+        </ul>
+        <div class="to_summary_sub"><a href="<$MTBlogURL$>archives.html">ブログ記事一覧</a></div>
+    </dd>
+</dl>
+		</mt:if>
+	</mt:Entries>
+</mt:Blogs>

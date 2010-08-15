@@ -1,0 +1,35 @@
+<ul>
+    <li class="first<mt:IfWebsite><mt:if name="main_index"> on</mt:if></mt:IfWebsite>"><a href="<$mt:var name="website_url"$>" title="トップ">トップ</a></li>
+<mt:IfWebsite>
+<mt:SortedTopLevelFolders>
+<mt:if tag="FolderLabel" eq="プライバシーポリシー">
+<mt:Unless name="top_nav">
+    <li<mt:if tag="FolderLabel" eq="$page_folder"> class="on"</mt:if>><a href="<$mt:var name="website_url"$><$mt:FolderPath$>" title="<$mt:FolderLabel$>"><$mt:FolderLabel$></a></li>
+</mt:Unless>
+<mt:else>
+<mt:if tag="FolderLabel" like="サイトマップ|設定用"><mt:else>
+    <li<mt:if tag="FolderLabel" eq="$page_folder"><mt:if name="page_title" ne="アクセスマップ"> class="on"</mt:if></mt:if>><a href="<$mt:var name="website_url"$><$mt:FolderPath$>" title="<$mt:FolderLabel$>"><$mt:FolderLabel$></a></li>
+</mt:if>
+</mt:if>
+</mt:SortedTopLevelFolders>
+<mt:Else>
+<mt:BlogParentWebsite>
+<mt:SortedTopLevelFolders>
+<mt:if tag="FolderLabel" eq="プライバシーポリシー">
+<mt:Unless name="top_nav">
+    <li><a href="<$mt:var name="website_url"$><$mt:FolderPath$>" title="<$mt:FolderLabel$>"><$mt:FolderLabel$></a></li>
+</mt:Unless>
+<mt:else>
+<mt:if tag="FolderLabel" like="サイトマップ|設定用"><mt:else>
+    <li<mt:If tag="FolderLabel" eq="$blog_name"> class="on"</mt:if>><a href="<$mt:var name="website_url"$><$mt:FolderPath$>" title="<$mt:FolderLabel$>"><$mt:FolderLabel$></a></li>
+</mt:if>
+</mt:if>
+</mt:SortedTopLevelFolders>
+</mt:BlogParentWebsite>
+</mt:IfWebsite>
+    <li<mt:if name="page_title" eq="アクセスマップ"> class="on"</mt:if>><a href="<$mt:var name="website_url"$>info/access.html" title="アクセス">アクセス</a></li>
+<mt:Unless name="top_nav">
+    <li<mt:if name="page_title" eq="サイトマップ"> class="on"</mt:if>><a href="<$mt:var name="website_url"$>sitemap/index.html" title="サイトマップ">サイトマップ</a></li>
+</mt:Unless>
+</ul>
+

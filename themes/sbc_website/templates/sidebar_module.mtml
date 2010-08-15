@@ -1,0 +1,11 @@
+        <div id="sub">
+            <div class="inner">
+<mt:If name="main_index">
+                <$mt:WidgetSet name="サイトメインページ"$>
+<mt:ElseIf name="page_folder" eq="会社案内">
+                <$mt:WidgetSet name="会社案内サイドバー"$>
+<mt:Else>
+                <$mt:WidgetSet name="通常サイドバー"$>
+</mt:If>
+            </div><!-- / inner -->
+        </div><!-- / sub -->

@@ -1,0 +1,69 @@
+<mt:SetVars>
+    website_id=<mt:BlogParentWebsite><$mt:WebsiteID$></mt:BlogParentWebsite>
+    blog_name=お知らせ
+    title=<$mt:Var name="page_title"$> - <$mt:BlogName encode_html="1"$> - <mt:BlogParentWebsite><$mt:WebsiteName encode_html="1"$></mt:BlogParentWebsite>
+<mt:If name="comment_confirmation">
+    page_title=確認
+    message=<p>コメントを投稿しました。</p>
+<mt:Else name="comment_pending">
+    page_title=コメントありがとうございます。
+    message=<p>コメントは現在承認されるまで公開を保留されています。</p>
+<mt:Else name="comment_error">
+    page_title=コメント投稿エラー
+    message=<p>コメントを投稿できませんでした。エラー: <$mt:ErrorMessage$></p>
+</mt:If>
+</mt:SetVars>
+<$mt:Include module="変数設定" blog_id="$website_id"$>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ja" xml:lang="ja" xmlns="http://www.w3.org/1999/xhtml" id="sixapart-standard">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=<$mt:PublishCharset$>" />
+    <meta name="generator" content="<$mt:ProductName version="1"$>" />
+<$mt:Include module="ヘッダー" blog_id="$website_id"$>
+    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="<mt:BlogParentWebsite><$mt:Link template="feed_recent"$></mt:BlogParentWebsite>" />
+    <script type="text/javascript">
+    /* <![CDATA[ */
+    var user = <$mt:UserSessionState$>;
+    var is_preview = true;
+    /* ]]> */
+    </script>
+    <title><$mt:Var name="title"$></title>
+</head>
+<body>
+    <$mt:Include module="Bodyヘッダー" blog_id="$website_id"$>
+    <div id="content">
+        <div class="content_inner">
+            <ul class="path">
+                <li><a href="<$mt:Var name="website_url"$>" title="トップ">トップ</a></li>
+                <li><a href="<$MTBlogURL$>"><$mt:Var name="blog_name"$></a></li>
+                <li><a href="<MTEntryLink>"><$MTEntryTitle$></a></li>
+                <li><$mt:Var name="page_title"$></li>
+            </ul>
+            <div id="main">
+                <div class="inner">
+
+<div class="entry">
+  <h2><$mt:Var name="page_title"$></h2>
+    <div class="entry_inner">
+
+<$mt:Var name="message"$>
+<p><a href="<mt:If name="comment_error">javascript:history.back()<mt:Else><$mt:EntryLink$></mt:If>">元の記事</a>に戻る</p>
+
+  </div><!-- / entry_inner -->
+</div><!-- / entry -->
+
+                </div><!-- / inner -->
+            </div><!-- / main -->
+            <div id="sub">
+                <div class="inner">
+<$mt:WidgetSet name="サイドバー"$>
+                </div><!-- / inner -->
+            </div><!-- / sub -->
+            <div class="to_head">
+                <a href="#header">このページの先頭へ</a>
+            </div>
+        </div><!-- / inner -->
+    </div><!-- / content -->
+    <$mt:Include module="Bodyフッター" blog_id="$website_id"$>
+</body>
+</html>

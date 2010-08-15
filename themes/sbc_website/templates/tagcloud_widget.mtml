@@ -1,0 +1,16 @@
+<mt:Tags top="20">
+	<mt:if name="__first__">
+<dl class="tags">
+    <dt>タグクラウド</dt>
+    <dd>
+        <div class="module-tagcloud">
+            <ul>
+	</mt:if>
+                <li class="module-list-item taglevel<$mt:TagRank max="6"$>"><a href="javascript:void(0)" onclick="location.href='<$mt:TagSearchLink encode_js="1"$>';return false;" rel="tag"><$mt:TagName$></a></li>
+	<mt:if name="__last__">
+            </ul>
+        </div><!-- / module-tagcloud -->
+    </dd>
+</dl>
+	</mt:if>
+</mt:Tags>

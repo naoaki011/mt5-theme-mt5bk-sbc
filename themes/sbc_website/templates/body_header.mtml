@@ -1,0 +1,16 @@
+    <div id="header">
+        <div class="inner">
+            <h1><a href="<$mt:var name="website_url"$>"><$mt:var name="website_name"$></a></h1>
+            <div class="h_navi">
+                <ul>
+                    <li><a href="<$mt:var name="website_url"$>sitemap/">サイトマップ</a></li>
+                </ul>
+<$mt:Include module="検索窓" blog_id="$website_id"$>
+            </div><!-- / h_navi -->
+        </div><!-- / inner -->
+    </div><!-- / header -->
+    <div id="nav">
+        <div class="inner">
+            <$mt:Include module="ナビゲーションリンク" top_nav="1" blog_id="$website_id"$>
+        </div><!-- / inner -->
+    </div><!-- / nav -->

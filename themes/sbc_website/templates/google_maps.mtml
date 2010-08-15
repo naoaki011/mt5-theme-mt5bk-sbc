@@ -1,0 +1,58 @@
+<mt:If name="gmap_apikey">
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=<$mt:Var name="gmap_apikey"$>" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+
+var map = null;
+var geocoder = null;
+var mapinfo = "<$mt:PageDataCompany _default="弊社" encode_js="1"$>"
+var shopaddress = "<$mt:PageDataPlace encode_js="1"$>";
+
+function attachOnLoad(func) {
+    window.attachEvent ? window.attachEvent('onload',func) : window.addEventListener('load',func,false);
+}
+
+function attachBeforeUnload(func) {
+    window.attachEvent ? window.attachEvent('onbeforeunload',func) : window.addEventListener('beforeunload',func,false);
+}
+
+function showAddress(address) {
+    if (GBrowserIsCompatible()) {
+        map = new GMap2(document.getElementById("map"));
+        geocoder = new GClientGeocoder();
+        if (geocoder) {
+            if (shopaddress) {
+            geocoder.getLatLng(
+                address,
+                function(point) {
+                    if (!point) {
+                        alert("入力した住所が見つかりません。");
+                    } else {
+                        map.clearOverlays();
+                        map.addControl(new GMapTypeControl());
+                        map.addControl(new GLargeMapControl());
+                        map.setCenter(point, 15);
+                        var marker = new GMarker(point);
+                        map.addOverlay(marker);
+                        map.openInfoWindowHtml(map.getCenter(), mapinfo);
+                        GEvent.addListener(marker, 'click', function() {
+                            marker.openInfoWindowHtml(mapinfo);
+                        });
+                    }
+                }
+            );
+            } else {
+                alert("住所が設定されていません。");
+            }
+        }
+    } else {
+        document.getElementById(mapid).innerHTML = '<p>申し訳ありませんが、このブラウザーでは、Google Mapsによる地図の表示が出来ません。</p>';
+    }
+    attachBeforeUnload(function(){GUnload()});
+}
+attachOnLoad(function() {
+    showAddress(shopaddress);
+});
+//]]>
+</script>
+</mt:If>

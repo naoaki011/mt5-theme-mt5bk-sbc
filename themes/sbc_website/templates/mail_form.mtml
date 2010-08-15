@@ -1,0 +1,51 @@
+<mt:SetVars>
+    website_id=<$mt:WebsiteID$>
+    page_title=お問い合せ
+    page_folder=お問い合せ
+    title=お問い合せ - <$mt:WebsiteName encode_html="1"$>
+</mt:SetVars>
+<mt:SetVarBlock name="bred_crumb"$>
+    <li><a href="<$mt:WebsiteURL$>">トップ</a></li>
+    <li><$mt:Var name="page_title"$></li>
+</mt:SetVarBlock>
+<$mt:Include module="変数設定"$>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ja" xml:lang="ja" xmlns="http://www.w3.org/1999/xhtml" id="sixapart-standard">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=<$mt:PublishCharset$>" />
+    <meta name="generator" content="<$mt:ProductName version="1"$>" />
+<$mt:Include module="ヘッダー"$>
+    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="<$mt:Link template="feed_recent"$>" />
+    <title><$mt:Var name="title"$></title>
+</head>
+<body>
+    <$mt:Include module="Bodyヘッダー"$>
+    <div id="content">
+        <div class="content_inner">
+            <ul class="path">
+                <$mt:GetVar name="bred_crumb"$>
+            </ul>
+            <div id="main">
+                <div class="inner">
+
+<div class="entry">
+    <h2>お問い合わせ内容のご入力</h2>
+    <div class="entry_inner">
+        <p>お問い合わせ内容によっては、お時間をいただく場合がございますので、あらかじめご了承ください。</p>
+        <p><strong>必須</strong> と書かれた項目は入力が必要な項目です。必ずご記入ください。</p>
+<$MTIncludeMailFormCommon$>
+        <p>当社では、お客様の個人情報の流出・漏洩の防止、その他個人情報の安全管理のために必要かつ適切な措置を講じるものとし、法令等に正当な理由がある場合を除き、お客様の同意なく目的外での利用及び第三者への提供は行いません。</p>
+    </div><!-- / entry_inner -->
+</div><!-- / entry -->
+
+                </div><!-- / inner -->
+            </div><!-- / main -->
+            <$mt:Include module="サイドバー"$>
+            <div class="to_head">
+                <a href="#header">このページの先頭へ</a>
+            </div>
+        </div><!-- / inner -->
+    </div><!-- / content -->
+    <$mt:Include module="Bodyフッター"$>
+</body>
+</html>

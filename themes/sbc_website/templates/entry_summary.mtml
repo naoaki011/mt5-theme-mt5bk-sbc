@@ -1,0 +1,36 @@
+<div class="entry">
+    <h2><a href="<$MTEntryPermalink$>"><$mt:EntryTitle$></a></h2>
+    <div class="posted">
+        <p><$mt:EntryAuthorLink show_hcard="1"$> （<$mt:EntryDate format="%x %X"$>）<mt:Unless name="hide_counts" eq="1"><mt:IfCommentsActive>｜<a href="<$mt:EntryPermalink$>#comments"><$mt:EntryCommentCount singular="コメント(1)" plural="コメント(#)" none="コメント(0)"$></a></mt:IfCommentsActive>｜<mt:IfPingsActive><span class="separator">|</span> <a href="<$mt:EntryPermalink$>#trackbacks"><$mt:EntryTrackbackCount singular="トラックバック(1)" plural="トラックバック(#)" none="トラックバック(0)"$></a></mt:IfPingsActive></mt:Unless></p>
+    </div>
+    <div class="entry_inner">
+<$mt:EntryBody$>
+<mt:if tag="EntryMore" strip_linefeeds="1" trim="1">
+        <div class="extended">
+続きを読む：<a href="<$MTEntryPermalink$>"  title="<$mt:entrytitle$>"><$mt:entrytitle$></a>
+        </div>
+</mt:if>
+<mt:if tag="EntryCategories">
+        <div class="entry-cates">
+            <h3 class="entry-cates-header">カテゴリ:</h3>
+            <ul class="entry-cates-list">
+<mt:EntryCategories>
+                <li class="entry-cate"><a href="<$mt:CategoryArchiveLink$>" rel="tag"><$mt:CategoryLabel$></a></li>
+</mt:EntryCategories>
+            </ul>
+        </div>
+</mt:if>
+<mt:if tag="EntryTags">
+        <div class="entry-tags">
+            <h3 class="entry-tags-header">タグ:</h3>
+            <ul class="entry-tags-list">
+<mt:EntryTags>
+                <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='<$mt:TagSearchLink encode_js="1"$>';return false;" rel="tag"><$mt:TagName$></a></li>
+</mt:EntryTags>
+            </ul>
+        </div>
+</mt:if>
+    </div><!-- /  entry_inner -->
+</div><!-- / entry -->
+
+

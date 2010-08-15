@@ -1,0 +1,129 @@
+<mt:SetVars>
+    page_title=サイトマップ
+    title=<$mt:BlogName encode_html="1"$>: サイトマップ
+    archive_index=1
+</mt:SetVars>
+<$mt:Include module="変数設定"$>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ja" xml:lang="ja" xmlns="http://www.w3.org/1999/xhtml" id="sixapart-standard">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=<$mt:PublishCharset$>" />
+    <meta name="generator" content="<$mt:ProductName version="1"$>" />
+<$mt:Include module="ヘッダー"$>
+    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="<$mt:Link template="feed_recent"$>" />
+    <title><$mt:Var name="title"$></title>
+</head>
+<body>
+    <$mt:Include module="Bodyヘッダー"$>
+    <div id="content">
+        <div class="content_inner">
+            <ul class="path">
+            <li><a href="<$mt:WebsiteURL$>">トップ</a></li>
+            <li>サイトマップ</li>
+            </ul>
+            <div id="main">
+                <div class="inner">
+
+<mt:Blogs include_blogs="children">
+
+<mt:If tag="BlogID" eq="$info_blogid">
+<mt:SetVarBlock name="news_html">
+<mt:IfArchiveTypeEnabled archive_type="Monthly">
+<mt:ArchiveList archive_type="Monthly">
+<mt:ArchiveListHeader>
+                <ul class="tree">
+</mt:ArchiveListHeader>
+                    <li class="tree<mt:ArchiveListFooter>_end</mt:ArchiveListFooter>"><a href="<$mt:ArchiveLink$>"><$mt:ArchiveTitle$></a></li>
+<mt:ArchiveListFooter>
+                </ul>
+</mt:ArchiveListFooter>
+</mt:ArchiveList>
+</mt:IfArchiveTypeEnabled>
+</mt:SetVarBlock>
+
+<mt:ElseIf tag="BlogID" eq="$product_blogid">
+
+<mt:SetVarBlock name="products_html">
+<mt:IfArchiveTypeEnabled archive_type="Category">
+<mt:SortedTopLevelCategories>
+<mt:SubCatIsFirst>
+                <ul class="tree">
+</mt:SubCatIsFirst>
+                    <li class="tree<MTSubCatIsLast>_end</MTSubCatIsLast>"><a href="<$mt:CategoryArchiveLink$>"><$mt:CategoryLabel$></a></li>
+<mt:SubCatIsLast>
+                </ul>
+</mt:SubCatIsLast>
+</mt:SortedTopLevelCategories>
+</mt:IfArchiveTypeEnabled>
+</mt:SetVarBlock>
+
+<mt:Else tag="BlogID" eq="$blog_blogid">
+
+<mt:SetVarBlock name="blog_html">
+<mt:IfArchiveTypeEnabled archive_type="Monthly">
+<mt:ArchiveList archive_type="Monthly">
+<mt:ArchiveListHeader>
+                <ul class="tree">
+</mt:ArchiveListHeader>
+                    <li class="tree<mt:ArchiveListFooter>_end</mt:ArchiveListFooter>"><a href="<$mt:ArchiveLink$>"><$mt:ArchiveTitle$></a></li>
+<mt:ArchiveListFooter>
+                </ul>
+</mt:ArchiveListFooter>
+</mt:ArchiveList>
+</mt:IfArchiveTypeEnabled>
+</mt:SetVarBlock>
+</mt:If>
+
+</mt:Blogs>
+
+<mt:SortedTopLevelFolders>
+<mt:FolderLabel setvar="FolderName">
+<mt:unless name="FolderName" like="サイトマップ|設定用">
+<mt:SetVarBlock name="sitemap_html" function="push">
+<a href="<$mt:var name="website_url"$><$mt:FolderPath$>" title="<$mt:FolderLabel$>"><$mt:FolderLabel$></a>
+<mt:if name="FolderName" like="お知らせ">
+<$mt:Var name="news_html"$>
+<mt:elseif name="FolderName" like="商品案内">
+<$mt:Var name="products_html"$>
+<mt:elseif name="FolderName" like="ブログ">
+<$mt:Var name="blog_html"$>
+<mt:elseif name="FolderName" like="会社案内">
+                <ul class="tree">
+                    <li class="tree"><a href="<$mt:var name="website_url"$>info/">会社概要</a></li>
+                    <li class="tree"><a href="<$mt:var name="website_url"$>info/history.html">会社沿革</a></li>
+                    <li class="tree"><a href="<$mt:var name="website_url"$>info/access.html">アクセスマップ</a></li>
+                    <li class="tree_end"><a href="<$mt:var name="website_url"$>info/top_comment.html">代表挨拶</a></li>
+                </ul>
+</mt:if>
+</mt:SetVarBlock>
+</mt:unless>
+</mt:SortedTopLevelFolders>
+
+                    <div class="entry">
+                        <h2>サイトマップ</h2>
+                        <div class="entry_inner">
+
+<ul>
+    <li class="home"><a href="<$mt:Link template="メインページ"$>">トップ</a>
+        <ul class="tree">
+<mt:Loop name="sitemap_html">
+            <li class="tree<mt:If name="__last__">_end</mt:If>"><MTGetVar name="__value__">
+            </li>
+</mt:Loop>
+        </ul>
+    </li>
+</ul>
+                        </div><!-- / inner -->
+                    </div><!-- / entry -->
+
+                </div><!-- / inner -->
+            </div><!-- / main -->
+            <$mt:Include module="サイドバー"$>
+            <div class="to_head">
+                <a href="#header">このページの先頭へ</a>
+            </div>
+        </div><!-- / inner -->
+    </div><!-- / content -->
+    <$mt:Include module="Bodyフッター"$>
+</body>
+</html>

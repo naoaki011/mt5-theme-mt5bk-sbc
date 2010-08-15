@@ -1,0 +1,147 @@
+AUTHOR: dakiny
+TITLE: 徳川一五代将軍慶喜公、征夷大将軍を辞職。
+BASENAME: post
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: richtext
+ALLOW PINGS: 1
+DATE: 11/10/1867 11:48:08 PM
+TAGS: 大政奉還,徳川慶喜,明治天皇
+-----
+BODY:
+<p>
+	<img alt="「大政奉還図」 邨田丹陵 筆" class="mt-image-left" height="260" src="/news/images/553px-Taisehokan.jpg" style="margin: 0pt 20px 20px 0pt; float: left;" width="240" />土佐藩より10月3日に提出された大政奉還の建白書を受け、慶応3年10月14日に江戸幕府第15代将軍徳川慶喜が統治権返上を明治天皇に上奏し、翌15日に慶喜公を加えて開催された朝議で勅許が決定され、天皇から慶喜への大政奉還勅許の沙汰書が授けられたことで、大政奉還が成立しました。<br />
+	&nbsp;</p>
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+-----
+--------
+AUTHOR: dakiny
+TITLE: 王政復古の大号令が発令
+BASENAME: post_1
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: richtext
+ALLOW PINGS: 1
+DATE: 01/03/1868 12:05:33 AM
+TAGS: 岩倉具視,明治天皇,薩摩藩
+-----
+BODY:
+<p>
+	慶応3年12月9日、薩摩藩兵ら5藩の軍が京都御所9門により固められ中、赦免されたばかりの岩倉具視らが参内し、御所内学問所において明治天皇が「王政復古の大号令」を発令されました。<br />
+	<br />
+	内容は<br />
+	<br />
+	1. （慶応3年10月24日に徳川慶喜が申し出た）将軍職辞職を勅許。<br />
+	2. 京都守護職・京都所司代の廃止。<br />
+	3. 江戸幕府の廃止。<br />
+	4. 摂政・関白の廃止。<br />
+	5. 新たに総裁、議定、参与の三職をおく。<br />
+	<br />
+	というものです。</p>
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+-----
+--------
+AUTHOR: dakiny
+TITLE: 鳥羽・伏見の戦いにて旧幕府軍敗戦、慶喜公は軍艦に乗り江戸へ退却
+BASENAME: post_2
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: richtext
+ALLOW PINGS: 1
+DATE: 01/27/1868 12:17:14 AM
+TAGS: 徳川慶喜
+-----
+BODY:
+<p>
+	慶応4年1月3日より6日まで、新政府軍と旧幕府軍の間において京都南郊の上鳥羽（京都市南区）、下鳥羽、竹田、伏見（京都市伏見区）を舞台に戦が繰り広げられました。開戦に積極的で無かったとされる徳川慶喜公は大阪城におり、旧幕府軍の敗戦が決定的となり、7日には慶喜公に対して追討令が出た報を聞くと、その夜僅かな側近たちとと共に密かに城を脱し、大阪湾に停泊中の幕府軍艦・開陽丸で江戸に退却されたとのことです。</p>
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+-----
+--------
+AUTHOR: dakiny
+TITLE: 江戸が東京と改名されました
+BASENAME: post_3
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: richtext
+ALLOW PINGS: 1
+DATE: 07/17/1868 12:33:30 AM
+TAGS: 明治天皇,東京,江戸
+-----
+BODY:
+<p>
+	明治元年5月24日、7月17日、江戸ヲ称シテ東京ト為スノ詔書が発せられました。この詔書では、天皇が日本をひとつの家族として東西を同視するとし、江戸が東国で第一の大都市・要所であるため天皇がここで政治をみることと、そのために江戸を東京と称することが発表された。保守派や京都市民への配慮から、東京遷都を明確にはしなかったものの、東西両都の方針通り東京が誕生しました。</p>
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+-----
+--------
+AUTHOR: dakiny
+TITLE: 蝦夷島政府が降伏、箱館戦争終結
+BASENAME: post_4
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: richtext
+ALLOW PINGS: 1
+DATE: 06/27/1869 12:52:14 AM
+-----
+BODY:
+<p>
+	<img alt="五稜郭本陣" class="mt-image-none" height="299" src="/news/images/goryokaku.jpg" style="" width="500" /></p>
+<p>
+	明治2年5月18日、新政府軍参謀・黒田清隆公率いる政府軍の箱館総攻撃により、旧幕府軍による五稜郭の蝦夷島政府、総裁・榎本武揚が無条件降伏に同意。蝦夷島政府消滅により、慶応4年から続く戊辰戦争が終結しました。</p>
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+-----
+--------

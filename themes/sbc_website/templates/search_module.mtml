@@ -1,0 +1,22 @@
+<mt:If name="gcustom_search">
+<form action="<$mt:var name="website_url"$>search/" id="cse-search-box" name="cse-search-box" class="search">
+    <div>
+        <input type="hidden" name="cx" value="<$mt:Var name="gcustom_search"$>" />
+        <input type="hidden" name="cof" value="FORID:11" />
+        <input type="hidden" name="ie" value="UTF-8" />
+        <input type="text" id="search" name="q" size="30" />
+        <input id="button" type="image" src="<$mt:var name="website_url"$>blogimg/s_button.png" alt="検索" value="検索" />
+    </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&amp;lang=ja"></script>
+<mt:Else>
+<form method="get" action="<$mt:CGIPath$><$mt:SearchScript$>" class="search">
+    <div>
+        <input type="text" id="search" name="search" size="30" value="<$mt:SearchString$>" style="border:1px solid #7E9DB9;padding: 2px;" />
+        <input type="hidden" name="IncludeBlogs" value="<$mt:Var name="website_id"$><mt:Blogs include_blogs="siblings">,<mt:BlogID></mt:Blogs>" />
+        <input type="hidden" name="blog_id" value="<mt:BlogID>" />
+        <input type="hidden" name="limit" value="<$mt:SearchMaxResults$>" />
+        <input id="button" type="image" src="<$mt:var name="website_url"$>blogimg/s_button.png" alt="検索" value="検索" />
+    </div>
+</form>
+</mt:If>

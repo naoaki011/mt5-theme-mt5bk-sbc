@@ -1,0 +1,15 @@
+<MTSetVar name="mail_setting" value="">
+<MTSetVar name="body_class" value="mt-main-index">
+<MTSetVar name="main_template" value="1">
+<MTSetVar name="sidebar" value="1">
+<MTSetVarBlock name="page_title">メールフォーム</MTSetVarBlock>
+<$MTInclude module="ヘッダー"$>
+
+<$MTMailFormAjaxJS$>
+
+<div id="ajax_mail">
+    <h2 class="comments-open-header">メールの送信</h2>
+<$MTIncludeMailFormCommon$>
+</div>
+
+<$MTInclude module="フッター"$>

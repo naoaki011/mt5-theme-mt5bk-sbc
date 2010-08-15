@@ -1,0 +1,48 @@
+<mt:SetVars>
+    website_id=<$mt:WebsiteID$>
+    page_title=<$mt:PageTitle$>
+    page_folder=<mt:PageFolder><$mt:FolderLabel$></mt:PageFolder>
+    title=<$mt:PageTitle encode_html="1"$> - <$mt:WebsiteName encode_html="1"$>
+</mt:SetVars>
+<$mt:Include module="変数設定"$>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ja" xml:lang="ja" xmlns="http://www.w3.org/1999/xhtml" id="sixapart-standard">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=<$mt:PublishCharset$>" />
+    <meta name="generator" content="<$mt:ProductName version="1"$>" />
+<$mt:Include module="ヘッダー"$>
+    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="<$mt:Link template="feed_recent"$>" />
+<$mt:EntryTrackbackData$>
+    <script type="text/javascript" src="<$mt:Link template="javascript"$>"></script>
+<mt:if name="page_title" eq="アクセスマップ"><$mt:Include module="GoogleMapsScript"$></mt:if>
+    <title><$mt:Var name="title"$></title>
+</head>
+<body>
+    <$mt:Include module="Bodyヘッダー"$>
+    <div id="content">
+        <div class="content_inner">
+            <ul class="path">
+                <li><a href="<$mt:WebsiteURL$>">トップ</a></li>
+<mt:ParentFolders>
+<mt:unless name="page_title" eq="$page_folder">
+                <li><a href="<$mt:WebsiteURL$><$mt:FolderPath$>" title="<$mt:FolderLabel$>"><$mt:FolderLabel$></a></li>
+</mt:unless>
+</mt:ParentFolders>
+                <li><$mt:PageTitle$></li>
+            </ul>
+            <div id="main">
+                <div class="inner">
+
+<$mt:Include module="ウェブページの詳細"$>
+
+                </div><!-- / inner -->
+            </div><!-- / main -->
+            <$mt:Include module="サイドバー"$>
+            <div class="to_head">
+                <a href="#header">このページの先頭へ</a>
+            </div>
+        </div><!-- / inner -->
+    </div><!-- / content -->
+    <$mt:Include module="Bodyフッター"$>
+</body>
+</html>

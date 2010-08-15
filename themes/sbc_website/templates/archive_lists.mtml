@@ -1,0 +1,39 @@
+<mt:IfArchiveTypeEnabled archive_type="Monthly">
+	<mt:ArchiveList archive_type="Monthly">
+		<mt:ArchiveListHeader>
+<dl class="page_list">
+    <dt>月間アーカイブ</dt>
+    <dd>
+        <ul>
+		</mt:ArchiveListHeader>
+            <li><a href="<$mt:ArchiveLink$>"><$mt:ArchiveTitle$> (<$mt:ArchiveCount$>)</a></li>
+		<mt:ArchiveListFooter>
+        </ul>
+    </dd>
+</dl>
+		</mt:ArchiveListFooter>
+	</mt:ArchiveList>
+</mt:IfArchiveTypeEnabled>
+
+<mt:IfArchiveTypeEnabled archive_type="Category">
+<dl class="page_list">
+    <dt>カテゴリーアーカイブ</dt>
+    <dd>
+<mt:SortedTopLevelCategories>
+	<mt:SubCatIsFirst>
+        <ul>
+	</mt:SubCatIsFirst>
+	<mt:If tag="CategoryCount">
+            <li><a href="<$mt:CategoryArchiveLink$>"><$mt:CategoryLabel$> (<$mt:CategoryCount$>)</a>
+	<mt:Else>
+            <li><$mt:CategoryLabel$>
+	</mt:If>
+	<$mt:SubCatsRecurse$>
+            </li>
+	<mt:SubCatIsLast>
+        </ul>
+	</mt:SubCatIsLast>
+</mt:SortedTopLevelCategories>
+    </dd>
+</dl>
+</mt:IfArchiveTypeEnabled>

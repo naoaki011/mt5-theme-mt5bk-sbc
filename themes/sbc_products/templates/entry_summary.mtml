@@ -1,0 +1,11 @@
+    <dl>
+        <dt>
+            <a href="<$mt:EntryPermalink$>">
+                <img src="<MTIfFileExist url="<$MTBlogURL$>thumbnail/<$MTEntryBasename$>.jpg"><$mt:BlogURL$>thumbnail/<$mt:EntryBasename$>.jpg<MTElse><mt:If tag="EntryDataThumbnail"><mt:EntryDataThumbnailAsset><$mt:AssetThumbnailURL$></mt:EntryDataThumbnailAsset><mt:Else><$mt:Var name="website_url"$>blogimg/noimage_s.png</mt:If></MTIfFileExist>" alt="<$mt:EntryTitle$>" width="114" height="76" style="border:none;padding:0;" />
+            </a>
+        </dt>
+        <dd class="product_title"><a href="<$MTEntryPermalink$>" title="<$MTEntryTitle$>"><$MTEntryTitle$></a></dd>
+<mt:If tag="EntryBody" strip_linefeeds="1" trim="1">
+        <dd><$mt:EntryBody filters="__default__"$></dd>
+</mt:If>
+     </dl>

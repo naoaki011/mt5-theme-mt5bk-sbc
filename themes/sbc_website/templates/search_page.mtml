@@ -1,0 +1,54 @@
+<mt:SetVars>
+    page_title=検索結果
+    title=<$mt:BlogName encode_html="1"$>: 検索結果
+    archive_index=1
+</mt:SetVars>
+<$mt:Include module="変数設定"$>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ja" xml:lang="ja" xmlns="http://www.w3.org/1999/xhtml" id="sixapart-standard">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=<$mt:PublishCharset$>" />
+    <meta name="generator" content="<$mt:ProductName version="1"$>" />
+<$mt:Include module="ヘッダー"$>
+    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="<$mt:Link template="feed_recent"$>" />
+    <title><$mt:Var name="title"$></title>
+</head>
+<body>
+    <$mt:Include module="Bodyヘッダー"$>
+    <div id="content">
+        <div class="content_inner">
+            <ul class="path">
+                <li><a href="<$mt:WebsiteURL$>">トップ</a></li>
+                <li>検索結果</li>
+            </ul>
+            <div id="main">
+                <div class="inner">
+
+                    <div class="entry">
+                        <h2>検索結果</h2>
+                        <div class="entry_inner">
+
+<div id="cse-search-results"></div>
+<script type="text/javascript">
+    var googleSearchIframeName = "cse-search-results";
+    var googleSearchFormName = "cse-search-box";
+    var googleSearchFrameWidth = 670;
+    var googleSearchDomain = "www.google.com";
+    var googleSearchPath = "/cse";
+</script>
+<script type="text/javascript" src="http://www.google.com/afsonline/show_afs_search.js"></script>
+
+                        </div><!-- / inner -->
+                    </div><!-- / entry -->
+
+                </div><!-- / inner -->
+            </div><!-- / main -->
+            <$mt:Include module="サイドバー"$>
+            <div class="to_head">
+                <a href="#header">このページの先頭へ</a>
+            </div>
+        </div><!-- / inner -->
+    </div><!-- / content -->
+    <$mt:Include module="Bodyフッター"$>
+</body>
+</html>
