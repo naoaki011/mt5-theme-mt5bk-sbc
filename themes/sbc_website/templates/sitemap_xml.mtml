@@ -25,12 +25,16 @@
 
 
 <MTIgnore>ウェブページ</MTIgnore>
-<MTIfArchiveTypeEnabled archive_type="Page"><MTPages lastn="0" folder="NOT 設定用">
+<MTIfArchiveTypeEnabled archive_type="Page">
+<MTPages lastn="0"><mt:SetVar name="output" value="1" />
+<mt:PageFolder><mt:If tag="FolderLabel" eq="設定用"><mt:SetVar name="output" value="0" /></mt:If></mt:PageFolder>
+<MTIf name="output">
 <url>
 <loc><$MTPagePermalink encode_xml="1"$></loc>
 <lastmod><$MTPageModifiedDate format="%Y-%m-%dT%H:%M:%S"$><$MTBlogTimezone$></lastmod>
 <priority>1.0</priority>
 </url>
+</MTIf>
 </MTPages></MTIfArchiveTypeEnabled>
 
 
@@ -61,13 +65,13 @@
 
 
 <MTIgnore>アーカイブインデックス</MTIgnore>
-<MTIfFileExist url="<$MTBlogURL$>archives.html">
+<MTIf tag="Link" template="archive_index">
 <url>
-<loc><$MTBlogURL$>archives.html</loc>
+<loc><$MTLink template="archive_index" encode_xml="1"$></loc>
 <lastmod><$MTDate utc="1" format="%Y-%m-%dT%H:%M:%S"$><$MTBlogTimezone$></lastmod>
 <priority>0.7</priority>
 </url>
-</MTIfFileExist>
+</MTIf>
 
 
 </mt:Blogs>

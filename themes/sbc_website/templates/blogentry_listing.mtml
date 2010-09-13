@@ -1,3 +1,4 @@
+<mt:If name="blog_blogid">
 <mt:Blogs include_blogs="$blog_blogid">
 <dl class="page_list">
     <dt><a href="<$mt:BlogURL$>"><$mt:BlogName$></a></dt>
@@ -17,3 +18,9 @@
 	</mt:Entries>
 </dl>
 </mt:Blogs>
+<mt:Else>
+<dl class="page_list">
+    <dt>ブログ記事一覧</dt>
+    <dd><p>名称を変更したブログの、設定作業まだ終了していません。</p></dd>
+</dl>
+</mt:If>

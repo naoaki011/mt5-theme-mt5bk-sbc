@@ -34,6 +34,7 @@
 </mt:Pages>
     </div><!-- / main_top -->
     <div class="main_top">
+<mt:If name="info_blogid">
 <mt:Blogs include_blogs="$info_blogid">
 <mt:If tag="BlogEntryCount">
         <h2><a href="<$MTBlogURL$>"><$MTBlogName$></a></h2>
@@ -56,10 +57,17 @@
 </mt:Entries>
         </div><!-- / main_top_inner -->
 </mt:Blogs>
+<mt:Else>
+        <h2>情報ブログ</h2>
+        <div class="main_top_inner">
+            <p>情報ブログが未作成か、名称を変更した後の設定作業が、まだ終了していません。</p>
+        </div><!-- / main_top_inner -->
+</mt:If>
    </div><!-- / main_top -->
 </div><!-- / area -->
 
 <div class="area">
+<mt:If name="product_blogid">
 <mt:Blogs include_blogs="$product_blogid">
 <mt:Entries lastn="4">
 <mt:If name="__first__">
@@ -82,6 +90,10 @@
     <p>まだ、<$MTBlogName$>は作成されていません。</p>
 </mt:Entries>
 </mt:Blogs>
+<mt:Else>
+    <h2>商品ブログ</h2>
+    <p>商品ブログが未作成か、名称を変更した後の設定作業が、まだ終了していません。</p>
+</mt:If>
 </div><!-- / area -->
 
                 </div><!-- / inner -->
